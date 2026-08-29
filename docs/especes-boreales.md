@@ -1,10 +1,9 @@
 # Espèces boréales — contenu de l'application
 
 **17 espèces** : 11 comestibles (dont 4 à manipuler/manger avec prudence), 3 toxiques, 3 mortelles.
-Format identique à la base champignons (`ESPECES` de `index.html`), champignons conservés en bonus.
+Format : `ESPECES` de `index.html` (aucune fiche de champignon dans le fork).
 
-Source de vérité technique : `/home/jo/workspace/.qa/especes-boreales.json` (copié dans le repo à
-l'intégration). Chaque fiche suit le schéma :
+Source de vérité technique : [`especes-boreales.json`](especes-boreales.json), dans ce dossier. Chaque fiche suit le schéma :
 
 ```json
 {
@@ -60,7 +59,6 @@ l'intégration). Chaque fiche suit le schéma :
 ## Règles de sécurité intégrées
 - Le statut **mortel l'emporte toujours** sur tout autre réglage (logique « plus grave gagne » de l'app).
 - Les fiches **toxiques/mortelles** portent des **confusions explicites** avec les comestibles.
-- Champignons : conservés comme **section bonus** (21 espèces existantes).
 
 ## Sources principales
 - *Flore laurentienne* (Frère Marie-Victorin) — référence botanique du Québec
