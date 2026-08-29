@@ -1,7 +1,7 @@
 - [🏠 Bienvenue](README.md)
 - [🚀 Premier pas](commencer.md)
 - [📍 Vos spots](spots.md)
-- [🍄 Identifier](identifier.md)
+- [🌿 Identifier](identifier.md)
 - [🤖 L'IA (optionnel)](ia.md)
 - [🧺 Journal de récolte](cueillettes.md)
 - [📊 Vos statistiques](stats.md)

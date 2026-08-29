@@ -1,5 +1,10 @@
 # Palettes « boréal » proposées — Cueillette Boréale
 
+> ⚠️ **Document historique** : ce rapport porte sur l'app champignons d'origine
+> (cueillette-memphis), avant le fork boréal. Les chiffres et espèces cités décrivent
+> l'état d'alors ; la source de vérité actuelle est [especes-boreales.md](especes-boreales.md).
+
+
 Trois variantes de la palette Memphis existante, pensées pour une ambiance boréal québécoise.
 Seuls les 10 tokens CSS du `:root` changent — aucune règle, aucune structure modifiée.
 Captures : `.qa/palette-{1,2,3}.png` (accueil) + `.qa/palette-{n}-identifier.png` et

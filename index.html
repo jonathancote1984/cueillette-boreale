@@ -384,12 +384,17 @@ h2.titre-vue .ico{font-size:20px;}
   </div>
   <div class="titre-ligne">
     <svg width="52" height="52" viewBox="0 0 64 64" aria-hidden="true">
-      <rect x="4" y="4" width="56" height="56" rx="16" fill="#1E4D33" stroke="#241A0F" stroke-width="4"/>
-      <path d="M15 40 Q15 19 32 19 Q49 19 49 40 Z" fill="#B3261E" stroke="#241A0F" stroke-width="3"/>
-      <circle cx="24" cy="27" r="3" fill="#FDF6E7"/>
-      <circle cx="33" cy="22" r="3" fill="#FDF6E7"/>
-      <circle cx="41" cy="29" r="3" fill="#FDF6E7"/>
-      <rect x="27" y="37" width="10" height="16" rx="4" fill="#FDF6E7" stroke="#241A0F" stroke-width="3"/>
+      <rect x="4" y="4" width="56" height="56" rx="16" fill="#EFF3EC" stroke="#0F2418" stroke-width="4"/>
+      <circle cx="22" cy="26" r="12" fill="#4A5FA5" stroke="#0F2418" stroke-width="3"/>
+      <circle cx="42" cy="24" r="12" fill="#6B82C4" stroke="#0F2418" stroke-width="3"/>
+      <circle cx="32" cy="42" r="13" fill="#3D4E8F" stroke="#0F2418" stroke-width="3"/>
+      <path d="M22 20 L22 32 M17 24 L27 28 M27 24 L17 28" stroke="#0F2418" stroke-width="2" fill="none"/>
+      <path d="M42 18 L42 30 M37 22 L47 26 M47 22 L37 26" stroke="#0F2418" stroke-width="2" fill="none"/>
+      <path d="M32 36 L32 49 M26 40 L38 44 M38 40 L26 44" stroke="#0F2418" stroke-width="2" fill="none"/>
+      <circle cx="19" cy="22" r="3.4" fill="#F8FBF6"/>
+      <circle cx="39" cy="20" r="3.4" fill="#F8FBF6"/>
+      <circle cx="29" cy="38" r="3.6" fill="#F8FBF6"/>
+      <path d="M50 14 L58 8 L54 18 Z" fill="#3A5C42" stroke="#0F2418" stroke-width="2.5"/>
     </svg>
     <div>
       <h1>Cueillette Boréale</h1>
@@ -417,7 +422,7 @@ h2.titre-vue .ico{font-size:20px;}
 
   <!-- ===== GUIDE ===== -->
   <section class="vue" id="vue-guide">
-    <h2 class="titre-vue"><span class="ico">🍄</span> Identifier</h2>
+    <h2 class="titre-vue"><span class="ico">🌿</span> Identifier</h2>
     <div class="alerte alerte-rouge">⚠️ <b>Règle d'or :</b> en cas de doute, on ne mange pas. Faites vérifier votre récolte par un expert (mycologue, pharmacien) avant toute consommation.</div>
     <div class="grille2" style="margin-bottom:12px">
       <button class="btn btn-vert btn-plein" onclick="identifierParPhoto(true)">📷 Appareil photo</button>
@@ -527,7 +532,7 @@ h2.titre-vue .ico{font-size:20px;}
       <button class="btn btn-jaune btn-plein" id="p-wiki">📖 Ouvrir le wiki</button>
     </div>
     <div class="carte">
-      <h3 style="margin:0 0 10px">🍄 Comment identifier</h3>
+      <h3 style="margin:0 0 10px">🌿 Comment identifier</h3>
       <p class="note" style="margin-bottom:8px">Chaque fiche du guide propose une checklist de <b>spécificités à repérer</b> (feuille, fruit, tige, odeur, habitat — ou chapeau/lames pour les champignons). Cochez chaque critère sur l'espèce réelle avant de décider.</p>
       <div style="font-size:13.5px;line-height:1.7">
         <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:6px"><span class="pastille-statut" style="background:var(--ambre);color:var(--noir);transform:none">⚠️</span><span><b>Rien n'est encore vérifié</b> — ne consommez pas. Cochez les critères un à un.</span></div>
@@ -543,7 +548,7 @@ h2.titre-vue .ico{font-size:20px;}
 
 <nav class="tabs" aria-label="Navigation principale">
   <button data-vue="spots" class="actif" aria-current="page"><span class="ico">📍</span>Spots</button>
-  <button data-vue="guide"><span class="ico">🍄</span>Identifier</button>
+  <button data-vue="guide"><span class="ico">🌿</span>Identifier</button>
   <button data-vue="cueillettes"><span class="ico">🧺</span>Cueillettes</button>
   <button data-vue="stats"><span class="ico">📊</span>Stats</button>
   <button data-vue="parametres"><span class="ico">⚙️</span>Paramètres</button>
@@ -564,7 +569,7 @@ h2.titre-vue .ico{font-size:20px;}
 
 <!-- ===== Modale de choix (espèce) ===== -->
 <div class="boite-confirm" id="boite-choix" role="dialog" aria-modal="true" aria-labelledby="choix-titre" aria-describedby="choix-message">
-  <h3 id="choix-titre">🍄 Que faire de cette espèce ?</h3>
+  <h3 id="choix-titre">🌿 Que faire de cette espèce ?</h3>
   <p id="choix-message"></p>
   <button class="btn btn-jaune btn-plein" id="choix-masquer" style="margin-bottom:8px">🙈 Masquer du guide</button>
   <button class="btn btn-rouge btn-plein" id="choix-supprimer" style="margin-bottom:8px">🗑️ Supprimer définitivement</button>
@@ -1332,7 +1337,7 @@ function rendreSpots() {
     return '<div class="item"><div class="vig">' + vig + '</div>' +
       '<div class="corps"><div class="nom">' + esc(s.nom) + '</div>' +
       '<div class="meta">' + (s.desc ? esc(s.desc) + '<br>' : '') + (s.lat && s.lng ? '📍 ' + esc(s.lat) + ', ' + esc(s.lng) : '📍 Position non notée') + '</div>' +
-      (s.especes && s.especes.length ? '<div class="meta">🍄 ' + s.especes.map(esc).join(' · ') + '</div>' : '') +
+      (s.especes && s.especes.length ? '<div class="meta">🌿 ' + s.especes.map(esc).join(' · ') + '</div>' : '') +
       '<div class="actions">' +
       '<button class="btn btn-vert btn-petit" onclick="partagerSpot(\'' + s.id + '\')">📤 Partager</button>' +
       '<button class="btn btn-bleu btn-petit" onclick="editerSpot(\'' + s.id + '\')">✏️ Modifier</button>' +
@@ -1343,7 +1348,7 @@ function rendreSpots() {
 async function partagerSpot(id) {
   const s = Etat.spots.find(x => x.id === id); if (!s) return;
   const carte = (s.lat && s.lng) ? 'https://www.google.com/maps?q=' + encodeURIComponent(s.lat + ',' + s.lng) : '';
-  const texte = '🍄 ' + s.nom + ' — spot de cueillette' +
+  const texte = '🌿 ' + s.nom + ' — spot de cueillette' +
     (s.desc ? '\n' + s.desc : '') +
     (carte ? '\n📍 ' + s.lat + ', ' + s.lng : '') +
     (carte ? '\n🗺️ ' + carte : '');
@@ -1503,7 +1508,7 @@ function rendreGuide() {
     const statutAffiche = (croise && croise.id && (GRAVl[croise.statut] || 0) > (GRAVl[e.statut] || 0)) ? croise.statut : e.statut;
     const prudenceAffiche = (croise && croise.id && (GRAVl[croise.statut] || 0) > (GRAVl[e.statut] || 0)) ? croise.prudence : !!e.prudence;
     return '<div class="item" style="cursor:pointer" role="button" tabindex="0" onclick="ouvrirDetail(\'' + e.id + '\',' + perso + ')">' +
-      '<div class="vig">' + (img ? '<img src="' + img + '" alt="' + esc(e.nom) + '" loading="lazy">' : '🍄') + '</div>' +
+      '<div class="vig">' + (img ? '<img src="' + img + '" alt="' + esc(e.nom) + '" loading="lazy">' : '🌿') + '</div>' +
       '<div class="corps"><div class="nom">' + esc(e.nom) + ' ' + badgeStatut(statutAffiche, prudenceAffiche) +
       (perso ? ' <span class="pastille-statut st-immangeable" style="background:var(--noir);color:var(--creme)">⭐ perso</span>' : '') + '</div>' +
       '<div class="ligne-latin">' + esc(e.latin || '') + '</div>' +
@@ -1569,7 +1574,7 @@ function ouvrirDetail(id, perso) {
   $('detail-contenu').innerHTML =
     '<div class="carte">' +
     (img ? '<img class="detail-img" src="' + img + '" alt="' + esc(e.nom) + '" role="button" tabindex="0" aria-label="Agrandir la photo" onclick="ouvrirLightbox(this.src)" style="cursor:zoom-in">' : '') +
-    '<h2 class="nom" style="margin:0;font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">🍄 ' + esc(e.nom) + ' ' + badgeStatut(statutAffiche, prudenceAffiche) +
+    '<h2 class="nom" style="margin:0;font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">🌿 ' + esc(e.nom) + ' ' + badgeStatut(statutAffiche, prudenceAffiche) +
     (perso ? ' <span class="pastille-statut st-immangeable" style="background:var(--noir);color:var(--creme)">⭐ perso</span>' : '') + '</h2>' +
     '<div class="ligne-latin">' + esc(e.latin || '') + '</div>' +
     avis +
@@ -1586,7 +1591,7 @@ function ouvrirDetail(id, perso) {
     '<div class="grille2" style="margin-top:14px">' + boutons + '</div>' +
     '</div>';
   naviguer('detail');
-  $('sous-titre').textContent = '🍄 ' + e.nom;
+  $('sous-titre').textContent = '🌿 ' + e.nom;
   $('badge').style.display = 'none';
 }
 let positionGuide = 0;
@@ -1648,7 +1653,7 @@ function rendreCueillettes() {
     const infoArchivee = (!info.id && c.especeId) ? ESPECES.find(x => x.id === c.especeId) || null : null;
     const statutEff = info.statut || (infoArchivee ? infoArchivee.statut : null);
     const prudenceEff = info.prudence || (infoArchivee ? !!infoArchivee.prudence : false);
-    let vig = c.photo ? '<img src="' + c.photo + '" alt="">' : (info.photo ? '<img src="' + info.photo + '" alt="' + esc(c.espece) + '">' : (info.id && !info.perso ? '<img src="img/especes/' + info.id + '.jpg" alt="' + esc(c.espece) + '">' : '🍄'));
+    let vig = c.photo ? '<img src="' + c.photo + '" alt="">' : (info.photo ? '<img src="' + info.photo + '" alt="' + esc(c.espece) + '">' : (info.id && !info.perso ? '<img src="img/especes/' + info.id + '.jpg" alt="' + esc(c.espece) + '">' : '🌿'));
     const spotN = nomSpot(c.spotId);
     return '<div class="item"><div class="vig">' + vig + '</div>' +
       '<div class="corps"><div class="nom">' + esc(c.espece) + (statutEff ? ' ' + badgeStatut(statutEff, prudenceEff) : '') + '</div>' +
@@ -1794,7 +1799,7 @@ function remplirSuggestionsMyco() {
           '<button type="button" class="puce" data-nom="' + esc(x.nomFr || x.latin) + '" data-latin="' + esc(x.latin) + '" style="margin:3px 6px 3px 0;display:inline-flex;align-items:center;gap:6px" onclick="choisirNomMyco(this.dataset.nom, this.dataset.latin)">' +
           (x.img && x.img.startsWith('img/')
             ? '<img src="' + x.img + '" alt="" style="width:26px;height:26px;border:2px solid var(--noir);border-radius:6px;object-fit:cover">'
-            : '<span style="width:26px;height:26px;border:2px solid var(--noir);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;background:repeating-linear-gradient(45deg, rgba(217,164,65,.3), rgba(217,164,65,.3) 4px, transparent 4px, transparent 8px);flex-shrink:0">🍄</span>') +
+            : '<span style="width:26px;height:26px;border:2px solid var(--noir);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;background:repeating-linear-gradient(45deg, rgba(30,77,51,.25), rgba(30,77,51,.25) 4px, transparent 4px, transparent 8px);flex-shrink:0">🌿</span>') +
           esc(x.nomFr || x.latin) + (x.nomFr ? ' <i style="opacity:.85">' + esc(x.latin) + '</i>' : '') + '</button>'
         ).join('')
       : '<p class="note" style="margin:4px 0 0">Aucune correspondance dans les ' + base.length + ' espèces de la base — vous pouvez saisir un nom libre.</p>';
@@ -2064,7 +2069,7 @@ function ouvrirSheetRestaurer() {
     '<label class="item-restaurer" style="display:flex;align-items:center;gap:10px;padding:9px;border:3px solid var(--noir);border-radius:14px 14px 14px 4px;margin-bottom:10px;background:var(--blanc);cursor:pointer">' +
     '<input type="checkbox" class="chk-restaurer" value="' + e.id + '" checked style="width:22px;height:22px;flex-shrink:0;accent-color:var(--rouille)">' +
     '<span class="vig" style="width:50px;min-height:50px;font-size:22px;border-radius:10px;border:2.5px solid var(--noir);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;background:repeating-linear-gradient(45deg,var(--ambre),var(--ambre) 6px,var(--blanc) 6px,var(--blanc) 12px)">' +
-    (e.img ? '<img src="' + e.img + '" style="width:100%;height:100%;object-fit:cover" alt="">' : '🍄') + '</span>' +
+    (e.img ? '<img src="' + e.img + '" style="width:100%;height:100%;object-fit:cover" alt="">' : '🌿') + '</span>' +
     '<span style="font-weight:700;font-size:14px">' + esc(e.nom) + '</span>' +
     '</label>'
   ).join('') : '<div class="vide-etat" style="padding:10px">Aucune espèce masquée.</div>';
@@ -2519,7 +2524,7 @@ async function analyserPhoto(dataUrl) {
     $('idphoto-contenu').innerHTML =
       '<img src="' + dataUrl + '" alt="Photo à identifier" style="width:100%;border:3px solid var(--noir);border-radius:16px;box-shadow:4px 4px 0 var(--noir);margin-bottom:12px">' +
       '<div class="carte">' +
-      '<div class="nom" style="font-weight:700;font-size:16.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">🍄 ' + esc(r.espece) + ' ' + (afficheComestible ? badgeStatut(r.statut, false) + (horsGuide ? ' <span class="pastille-statut st-inconnu">⚠️ hors guide</span>' : '') : (fiable && prudente ? badgeStatut('prudence', false) : '<span class="pastille-statut st-inconnu">⚠️ À vérifier</span>')) + '</div>' +
+      '<div class="nom" style="font-weight:700;font-size:16.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">🌿 ' + esc(r.espece) + ' ' + (afficheComestible ? badgeStatut(r.statut, false) + (horsGuide ? ' <span class="pastille-statut st-inconnu">⚠️ hors guide</span>' : '') : (fiable && prudente ? badgeStatut('prudence', false) : '<span class="pastille-statut st-inconnu">⚠️ À vérifier</span>')) + '</div>' +
       (r.latin ? '<div class="ligne-latin">' + esc(r.latin) + '</div>' : '') +
       (confiance !== null ? '<div class="meta" style="margin:2px 0 8px">Confiance : <b>' + Math.round(confiance) + ' %</b>' + (aVerifier || (fiable && prudente) ? ' — <b style="color:var(--rouille)">vérifiez avec le guide</b>' : '') + '</div>' : '') +
       alerteStatut(r.statut, prudente) +

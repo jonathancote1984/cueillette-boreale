@@ -25,4 +25,4 @@ sa position GPS, une photo et les espèces que vous y trouvez.
 - Ajoutez une **photo repère** (un arbre, un cours d'eau) pour retrouver le coin facilement.
 - Notez les **espèces** que vous y avez vues : vous saurez où retourner à la saison.
 
-[Identifier un champignon →](identifier.md)
+[Identifier une plante boréale →](identifier.md)

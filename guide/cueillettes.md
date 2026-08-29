@@ -19,7 +19,7 @@ Dans l'onglet **Cueillettes**, vous notez chaque récolte : la date, l'espèce, 
 
 Chaque ligne du journal affiche un **badge** de comestibilité (comestible, prudence, toxique,
 **MORTEL**). Si l'espèce correspond au guide ou à une espèce déjà enregistrée comme dangereuse,
-le badge **le plus grave gagne toujours** — jamais de vert sur un champignon mortel.
+le badge **le plus grave gagne toujours** — jamais de vert sur une espèce mortelle.
 
 ## Modifier / supprimer
 

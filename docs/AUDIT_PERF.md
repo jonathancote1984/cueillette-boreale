@@ -1,5 +1,10 @@
 # Audit Performance / PWA / UX — cueillette-memphis
 
+> ⚠️ **Document historique** : ce rapport porte sur l'app champignons d'origine
+> (cueillette-memphis), avant le fork boréal. Les chiffres et espèces cités décrivent
+> l'état d'alors ; la source de vérité actuelle est [especes-boreales.md](especes-boreales.md).
+
+
 **Date :** 16 août 2026 — **Méthode :** analyse statique complète (index.html, sw.js, manifest.json) + inspection réelle des images (PIL : formats, dimensions, poids) + croisement automatique des références (FICHIERS ↔ disque ↔ code). PWA statique sans build : pas de Lighthouse fiable ici ; les temps de parse sont des estimations documentées comme telles.
 
 **Verdict global :** aucune sévérité **critique**. La PWA est **offline-first complète et propre** (135/135 ressources locales couvertes, exclusions API correctes, re-rendus ciblés sur les interactions à enjeu). Les 3 constats **majeurs** portent sur le poids d'installation (images non optimisées, 25,7 Mo), la typo signature absente hors-ligne (Google Fonts jamais précachée), et une fragilité du cache runtime (404 empoisonnables). Rien ne bloque l'usage terrain.

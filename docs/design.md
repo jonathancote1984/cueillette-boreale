@@ -35,24 +35,21 @@ celle de **l'automne québécois** — ambre, rouille, terracotta, olive, cuir s
 
 | Rôle | Nom | Code | Usage |
 |---|---|---|---|
-| Accent principal | Ambre | `#D9A441` | boutons jaunes, puces actives, titres de feuille, zigzag |
-| Signal | Rouille | `#B45309` | alertes de prudence, onglet Identifier actif |
-| Énergie | Terracotta | `#B94527` | FAB, carte « Dernière sortie », onglet Stats actif |
-| Confiance | Olive | `#6F8F3E` | badges Comestible, boutons d'identification photo |
-| Action secondaire | Cuir | `#8A5A2B` | boutons Modifier, titres de section du guide |
-| Fond | Crème | `#F3E8D5` | fond général et pois |
-| Surfaces | Blanc chaud | `#FDF6E7` | cartes, feuilles, champs |
+| Fond | Ivoire boréal | `#EFF3EC` | fond général |
+| Primaire | Vert sapin | `#1E4D33` | barre de navigation, titres, texte principal |
+| Accent nature | Vert mousse | `#5E8C4A` | badges Comestible, boutons d'identification photo, succès |
+| Accent terre | Cuivre brun | `#B5651D` | actions secondaires, FAB, alertes de prudence |
+| Danger | Rouge boréal | `#A32633` | badges MORTEL, suppression, pastille compteur |
 | Trait et texte | Noir | `#241A0F` | bordures, texte principal, toasts |
-| Danger | Rouge | `#B3261E` | badges MORTEL, suppression, pastille compteur |
-| Neutre | Gris | `#A89882` | boutons Retour, filtre « Tous », badge Immangeable |
+| Surfaces | Blanc ivoire | `#FBFDF9` | cartes, feuilles, champs |
 
-Couleurs de service documentées (ne pas en ajouter sans les inscrire dans
-[../DESIGN.md](../DESIGN.md)) : bleu canard `#0B6E96` et rose `#C2185B` (onglets actifs),
-rouille d'onglet `#B3540B`, vert de mesure `#0B7A55`, brun tabac `#7A5C2E`, brun d'en-tête
-`#C87224`, fonds d'alerte `#F6DFD2` (rouge) et `#F4E3C3` (orange), barre vide `#D8C9AC`.
+Palette complète du fork boréal : ivoire `#EFF3EC` (fond), vert sapin `#1E4D33`
+(primaire/texte), vert mousse `#5E8C4A` (succès/comestible), cuivre brun `#B5651D`
+(prudence/actions secondaires), rouge boréal `#A32633` (danger MORTEL). Ne pas ajouter de
+couleur sans l'inscrire dans [../DESIGN.md](../DESIGN.md).
 
-Le manifeste PWA est aligné sur la palette : `theme_color` ambre `#D9A441`,
-`background_color` crème `#F3E8D5`.
+Le manifeste PWA est aligné sur la palette : `theme_color` vert sapin `#1E4D33`,
+`background_color` ivoire `#EFF3EC`.
 
 ## Typographie
 
@@ -64,7 +61,7 @@ passe par le poids (400 à 700) et la taille.
 |---|---|---|---|---|
 | Display (H1 d'en-tête) | 21 px | 700 | 1.1 | incliné de -1,5° |
 | Titre de vue | 20 px | 700 | 1.2 | pastille blanche cerclée de noir, -1° |
-| Titre de feuille | 18 px | 700 | 1.2 | pastille ambre, -1° |
+| Titre de feuille | 18 px | 700 | 1.2 | pastille mousse, -1° |
 | Corps | 16 px | 400 | 1.65 | descriptions, fiches |
 | Label de champ | 13 px | 700 | 1.4 | libellés de formulaire |
 | Meta | 12,5 px | 400 | 1.5 | opacité 0,85 — ne pas descendre sous 0,8 (contraste AA) |
@@ -96,21 +93,21 @@ garder les colonnes stables.
 ## Composants clés
 
 - **Boutons** — pilules, bordure 3 px, ombre dure 3 px ; couleur selon l'action (ambre par
-  défaut, olive pour l'identification photo, rouge pour la destruction, cuir pour la
-  modification, terracotta pour le FAB). À l'appui : `translate(3px, 3px)` et ombre réduite,
+  défaut, mousse pour l'identification photo, rouge boréal pour la destruction, cuir pour la
+  modification, cuivre brun pour le FAB). À l'appui : `translate(3px, 3px)` et ombre réduite,
   effet « bouton qu'on enfonce ». Cibles tactiles ≥ 44 px.
-- **Pastilles de statut** — pilules inclinées de -1,5° : olive Comestible, ambre Prudence,
-  gris Immangeable, orange Toxique, rouge MORTEL ☠️, gris Inconnu ⚠️.
+- **Pastilles de statut** — pilules inclinées de -1,5° : mousse Comestible, cuivre Prudence,
+  rouge boréal MORTEL ☠️, gris Inconnu ⚠️.
 - **Cartes** — coins 18 px avec **un coin cassé** à 5 px, fond blanc chaud, ombre dure 5 px.
-  Variante « item » avec vignette de 88 px à rayures ambre et blanc.
-- **Champs de saisie** — bordure 3 px, coins 12 px avec coin cassé 4 px, anneau ambre 3 px au
+  Variante « item » avec vignette de 88 px à rayures mousse et ivoire.
+- **Champs de saisie** — bordure 3 px, coins 12 px avec coin cassé 4 px, anneau mousse 3 px au
   focus. Zone photo en pointillé sur fond crème.
 - **Feuilles glissantes** — max 84 vh, coins hauts 24 px, poignée de fermeture, entrée
   élastique, garde-fou sur les champs modifiés.
 - **Navigation** — barre fixe basse, 5 onglets, onglet actif relevé de 4 px avec zigzag
   ambre et couleur propre.
-- **Alertes de sécurité** — coin décoratif (cercle rayé rouge pour MORTEL, losange rouille
-  pour la prudence) ; fond saumon `#F6DFD2` ou crème doré `#F4E3C3` ; la mention du centre
+- **Alertes de sécurité** — coin décoratif (cercle rayé rouge pour MORTEL, losange cuivre
+  pour la prudence) ; fond ivoire rosé pour le danger, ivoire doré pour la prudence ; la mention du centre
   antipoison est **obligatoire** sur une alerte mortelle.
 - **Fiche hybride (checklist terrain)** — photo 16:9, case ✓, titre, description, compteur
   « n/5 » en pastille noire (`aria-live="polite"`), verdict pleine largeur ✅ / ⚠️ / ☠️.

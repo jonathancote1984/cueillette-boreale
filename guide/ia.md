@@ -1,19 +1,19 @@
 # 🤖 L'identification par IA (optionnel)
 
-L'app peut vous aider à **identifier un champignon à partir d'une photo**, à **générer une fiche
+L'app peut vous aider à **identifier une plante ou une baie à partir d'une photo**, à **générer une fiche
 détaillée** ou des **illustrations** — mais uniquement si vous ajoutez votre **propre clé d'IA**.
 C'est **entièrement optionnel** : l'app fonctionne très bien sans.
 
-> 💡 Vous n'êtes **pas obligé d'utiliser l'IA**. Le guide de 21 espèces et la checklist terrain
+> 💡 Vous n'êtes **pas obligé d'utiliser l'IA**. Le guide de 17 espèces et la checklist terrain
 > fonctionnent hors-ligne, sans aucune clé.
 
 ## À quoi sert l'IA ?
 
 | Fonction | Où | Ce que ça fait |
 |---|---|---|
-| 🍄 **Identifier par photo** | Onglet Identifier → **📷 Appareil** ou **🖼️ Une photo** | Photographiez le champignon (dessus **et** dessous), l'IA propose une espèce avec un **niveau de confiance**. |
+| 🍄 **Identifier par photo** | Onglet Identifier → **📷 Appareil** ou **🖼️ Une photo** | Photographiez la plante entière (feuille, fruit, tige), l'IA propose une espèce avec un **niveau de confiance**. |
 | 📝 **Fiche détaillée par IA** | Nouvelle variété → **✨ Détails par IA** | Entrez un nom (latin de préférence), l'IA rédige description, caractéristiques, confusions, saison, habitat. |
-| 🎨 **Illustrations par IA** | Nouvelle variété → **🎨 Illustration IA** | Génère une image par spécificité (chapeau, dessous, pied, section, habitat). |
+| 🎨 **Illustrations par IA** | Nouvelle variété → **🎨 Illustration IA** | Génère une image par spécificité (feuille, fruit, tige, odeur, habitat). |
 
 ## 🔑 Obtenir une clé gratuite
 
@@ -44,7 +44,7 @@ Dans **⚙️ Paramètres → 🤖 Fournisseur d'IA**, vous pouvez choisir le se
 
 ### Identifier par photo
 1. Onglet **🍄 Identifier** → **📷 Appareil photo**.
-2. Cadrez le champignon : photographiez le **dessus**, puis le **dessous** (lames, veines, aiguillons).
+2. Cadrez la plante entière : **feuille et fruit visibles**, base de la tige au besoin.
 3. L'IA propose une espèce avec son niveau de confiance. **Le guide garde toujours le dernier mot**
    sur la comestibilité : une espèce mortelle n'est **jamais** affichée comestible.
 
@@ -59,9 +59,9 @@ Dans **⚙️ Paramètres → 🤖 Fournisseur d'IA**, vous pouvez choisir le se
 
 ## ⚠️ Conseils et limites
 
-- **L'IA n'est pas un mycologue.** Elle aide, mais ne remplace ni un expert ni votre jugement.
+- **L'IA n'est pas une botaniste.** Elle aide, mais ne remplace ni un expert ni votre jugement.
   **En cas de doute, on ne mange pas.**
-- Une **photo seule** ne suffit souvent pas : le **dessous** et le **pied** sont des critères décisifs.
+- Une **photo seule** ne suffit souvent pas : la **feuille**, le **fruit** et la **tige** sont des critères décisifs.
 - Si l'IA est **peu sûre** (confiance faible), l'app vous le dit : **ne consommez pas**.
 - La photo envoyée est **nettoyée de ses métadonnées** (dont le GPS) — votre position ne quitte pas l'appareil.
 - **Ne partagez jamais votre clé** avec qui que ce soit.

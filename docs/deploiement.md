@@ -1,13 +1,13 @@
 # Déploiement
 
-> **Wiki Cueillette Québec — édition Memphis** · [Accueil du dépôt](../README.md) ·
+> **Wiki Cueillette Boréale** · [Accueil du dépôt](../README.md) ·
 > [Index du wiki](README.md)
 
 ## Sommaire
 
 - [Comment le site est publié](#comment-le-site-est-publié)
 - [Procédure de mise à jour](#procédure-de-mise-à-jour)
-- [Le bump du cache `cqm-vN`](#le-bump-du-cache-cqm-vn)
+- [Le bump du cache `cqb-vN`](#le-bump-du-cache-cqb-vn)
 - [Ajouter des fichiers au cache hors-ligne](#ajouter-des-fichiers-au-cache-hors-ligne)
 - [Vérifications après déploiement](#vérifications-après-déploiement)
 - [Option : publier avec GitHub Actions](#option--publier-avec-github-actions)
@@ -15,11 +15,11 @@
 
 ## Comment le site est publié
 
-- Dépôt : `jonathancote1984/cueillette-memphis`, branche `main`.
+- Dépôt : `jonathancote1984/cueillette-boreale`, branche `main`.
 - Publication : **GitHub Pages en mode « Deploy from a branch »**, branche `main`, dossier
   `/ (root)`. Le dépôt ne contient **aucun** workflow dans `.github/` : il n'y a rien à
   compiler.
-- Adresse publique : <https://jonathancote1984.github.io/cueillette-memphis/>
+- Adresse publique : <https://jonathancote1984.github.io/cueillette-boreale/>
 - Déployer = **pousser sur `main`**. Pages republie en une à deux minutes.
 
 Rien d'autre n'est requis : pas de variable d'environnement, pas de secret, pas d'étape de
@@ -28,12 +28,12 @@ compilation. Les chemins sont relatifs, donc le sous-dossier de Pages fonctionne
 ## Procédure de mise à jour
 
 ```bash
-cd cueillette-memphis
+cd cueillette-boreale
 
 # 1. modifier l'app (index.html, styles, images, etc.)
 
 # 2. bumper le cache du service worker (OBLIGATOIRE)
-#    sw.js ligne 4 : const CACHE = 'cqm-vN';  ->  'cqm-v(N+1)'
+#    sw.js ligne 4 : const CACHE = 'cqb-vN';  ->  'cqb-v(N+1)'
 
 # 3. vérifier localement
 python3 -m http.server 8091   # http://localhost:8091
@@ -49,13 +49,13 @@ git push origin main
 Étape 2 non facultative : sans bump, les appareils déjà installés continuent de servir
 l'ancienne version depuis leur cache.
 
-## Le bump du cache `cqm-vN`
+## Le bump du cache `cqb-vN`
 
 Le numéro de cache est déclaré à un seul endroit :
 
 ```js
 // sw.js
-const CACHE = 'cqm-vN';
+const CACHE = 'cqb-vN';
 ```
 
 **Quand bumper** : dès qu'un fichier servi change — `index.html`, `sw.js`,
@@ -65,20 +65,20 @@ fichiers ne sont pas mis en cache par le service worker.
 
 **Ce que le bump déclenche**
 
-1. `install` : le socle critique (page, manifeste, icônes, 21 photos d'espèces, JSON de
-   crédits, `img/mycoquebec.json`, police) est mis en cache avec `addAll` ; les 100 photos de
+1. `install` : le socle critique (page, manifeste, icônes, photos d'espèces, JSON de
+   crédits, police) est mis en cache avec `addAll` ; les photos de
    spécificités sont ajoutées une à une, les échecs étant tolérés — une image manquante ne
    casse plus l'installation.
-2. `activate` : tous les caches nommés `cqm-*` autres que le courant sont supprimés, puis
+2. `activate` : tous les caches nommés `cqb-*` autres que le courant sont supprimés, puis
    `clients.claim()`.
 3. `fetch` : cache d'abord, réseau ensuite ; une réponse non `ok` n'est jamais mise en cache ;
    le repli `index.html` est réservé aux navigations (jamais aux images ou aux JSON).
 
-**Jamais mis en cache** : `*.wikimedia.org`, `*.googleapis.com`, `*.mycoquebec.org`, et toute
+**Jamais mis en cache** : `*.wikimedia.org`, `*.googleapis.com`, `*.openrouter.ai`, et toute
 URL contenant `key=`.
 
 Convention de journal de bord : le message de commit mentionne le bump
-(`— SW bump cqm-v62`), ce qui permet de retracer la version servie à chaque changement.
+(`— SW bump cqb-v3`), ce qui permet de retracer la version servie à chaque changement.
 
 ## Ajouter des fichiers au cache hors-ligne
 
@@ -89,7 +89,7 @@ Pour qu'une nouvelle ressource soit disponible hors-ligne :
 2. si c'est une photo de spécificité, la placer dans `img/specs/` (le service worker traite
    ce préfixe en mode tolérant) ;
 3. ajouter l'entrée d'attribution correspondante dans le `credits.json` du dossier ;
-4. bumper `cqm-vN`.
+4. bumper `cqb-vN`.
 
 ## Vérifications après déploiement
 
@@ -98,7 +98,7 @@ Pour qu'une nouvelle ressource soit disponible hors-ligne :
 - [ ] la page répond en 200 à l'adresse Pages, en navigation privée ;
 - [ ] DevTools → *Application → Service Workers* : le service worker actif porte le
       **nouveau** numéro de cache ;
-- [ ] DevTools → *Application → Cache Storage* : un seul cache `cqm-*` subsiste ;
+- [ ] DevTools → *Application → Cache Storage* : un seul cache `cqb-*` subsiste ;
 - [ ] mode avion (ou *Network → Offline*) : le guide, les fiches et les 5 photos de
       spécificités s'affichent ;
 - [ ] `manifest.json` répond en 200 et l'invite « Ajouter à l'écran d'accueil » apparaît ;
@@ -151,7 +151,7 @@ L'app étant statique, revenir en arrière consiste à republier l'état antéri
 
 ```bash
 git revert <commit fautif>       # ou git reset --hard <commit sain> puis push forcé
-# bumper de nouveau cqm-vN (un retour arrière est aussi un changement)
+# bumper de nouveau cqb-vN (un retour arrière est aussi un changement)
 git push origin main
 ```
 

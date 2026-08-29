@@ -1,7 +1,6 @@
 # Fonctionnalités
 
-> **Wiki Cueillette Québec — édition Memphis** · [Accueil du dépôt](../README.md) ·
-> [Index du wiki](README.md)
+> **Wiki Cueillette Boréale** · [Accueil du dépôt](../README.md) · [Index du wiki](README.md)
 
 ## Sommaire
 
@@ -17,8 +16,8 @@
 ## Navigation générale
 
 Cinq onglets dans une barre fixe au bas de l'écran : **Spots**, **Identifier**,
-**Cueillettes**, **Stats**, **Paramètres**. L'onglet actif est relevé, souligné d'un zigzag
-ambre et porte `aria-current="page"`.
+**Cueillettes**, **Stats**, **Paramètres**. L'onglet actif est relevé et porte
+`aria-current="page"`.
 
 Un bouton flottant (FAB) en bas à droite déclenche l'action principale de l'écran courant :
 📍 en Spots, ＋ ailleurs. Il est masqué en Stats, en Paramètres et dans une fiche détaillée.
@@ -26,7 +25,7 @@ Un bouton flottant (FAB) en bas à droite déclenche l'action principale de l'é
 Les formulaires s'ouvrent en **feuilles glissantes** (bottom sheets) avec poignée. Un
 garde-fou détecte les champs modifiés : fermer par le voile, la poignée ou `Échap` demande une
 confirmation au lieu de jeter la saisie. Aucune boîte système du navigateur n'est utilisée :
-confirmations et choix passent par des modales Memphis.
+confirmations et choix passent par des modales de l'app.
 
 ## Spots
 
@@ -45,28 +44,27 @@ Enregistrement des coins de cueillette.
 ## Identifier
 
 L'onglet le plus riche. Il combine un guide de référence, une méthode de vérification
-terrain et deux fonctions d'IA facultatives.
+terrain et des fonctions d'IA facultatives.
 
-### Guide des 21 espèces
+### Guide des 17 plantes boréales
 
 - Recherche par nom (français ou latin), avec anti-rebond.
-- Deux filtres en listes déroulantes : **comestibilité** et **saison**.
-- Chaque espèce affiche une vignette locale (les 21 photos sont embarquées, donc
-  disponibles hors-ligne) et une pastille de statut : comestible, prudence, immangeable,
-  toxique, **MORTEL**, ou inconnu.
+- Filtres en listes déroulantes : **comestibilité** et **saison**.
+- Chaque espèce affiche une pastille de statut : comestible, prudence, toxique,
+  **MORTEL**, ou inconnu.
 
-Répartition du guide : 10 comestibles (dont 2 à cuisson obligatoire), 1 immangeable,
-5 toxiques, 5 mortelles. Liste complète dans
-[Guide d'identification](guide-identification.md).
+Répartition du guide : 11 comestibles (dont 4 à prudence — ail des bois, fougère-aigle,
+sureau du Canada, plus la vigilance générale), 3 toxiques, 3 mortelles. Liste complète dans
+[Espèces boréales](especes-boreales.md) et [Guide d'identification](guide-identification.md).
 
 ### Fiche d'espèce
 
-- Photo, nom français, nom latin, statut, saison, habitat, description.
-- **Confusions dangereuses** explicitement nommées.
-- **Checklist terrain** : 5 spécificités (chapeau ; hyménium — lames, tubes ou aiguillons ;
-  pied ; chair et odeur ; habitat), chacune avec une photo réelle et la description de ce
-  qu'il faut observer. Les cases cochées sont persistées localement (store `checklist`),
-  avec compteur « n/5 » et verdict.
+- Nom français, nom latin, statut, saison, habitat, description.
+- **Confusions dangereuses** explicitement nommées (ciguë maculée vs carotte sauvage,
+  ciguë aquatique, berce laineuse, scille penchée…).
+- **Checklist terrain** : 5 spécificités (feuille ; fruit ; tige ; odeur ; habitat), chacune
+  avec la description de ce qu'il faut observer. Les cases cochées sont persistées
+  localement (store `checklist`), avec compteur « n/5 » et verdict.
 - Alerte rouge non négociable sur les espèces mortelles, avec le numéro du centre
   antipoison.
 - Bouton pour masquer l'espèce (elle peut être restaurée) ou la supprimer définitivement
@@ -74,10 +72,10 @@ Répartition du guide : 10 comestibles (dont 2 à cuisson obligatoire), 1 immang
 
 ### Identification par photo (IA, facultatif)
 
-- Photo prise sur place ou choisie dans la galerie, envoyée à Gemini avec un prompt
-  d'identification structuré.
+- Photo prise sur place ou choisie dans la galerie, envoyée à Gemini **ou OpenRouter**
+  (fournisseur choisi dans les paramètres) avec un prompt d'identification structuré.
 - Retour : espèce probable, nom latin, statut, **niveau de confiance**, description,
-  5 caractéristiques observables, confusions à éviter.
+  caractéristiques observables, confusions à éviter.
 - Seuils : ≥ 90 % « fiable », 60 à 89 % « à vérifier », en dessous ou espèce inconnue
   → aucune confiance accordée.
 - **Le guide a le dernier mot** : si l'espèce proposée correspond à une espèce du guide (ou
@@ -91,13 +89,9 @@ Répartition du guide : 10 comestibles (dont 2 à cuisson obligatoire), 1 immang
 - Ajout, modification, suppression de vos propres espèces, marquées « perso » dans le guide.
 - Feuille en **2 étapes** : (1) Identité — nom français, latin, comestibilité, saison,
   prudence ; (2) Détails et photo — habitat, description, caractéristiques, confusions,
-  photos des 5 spécificités.
-- **Autocomplétion MycoQuébec** sur le nom français (base embarquée `img/mycoquebec.json`,
-  3 938 entrées) : le nom latin se remplit automatiquement.
+  photo.
 - **Détails par IA** : génération de la fiche complète à partir du nom (latin de
-  préférence).
-- **Illustrations** : recherche d'une photo libre par spécificité, selon l'ordre de sources
-  choisi dans les paramètres (MycoQuébec, Wikimedia, IA — 6 combinaisons).
+  préférence), via Gemini ou OpenRouter.
 - Les espèces d'origine masquées ou supprimées laissent une « tombe » : leurs signaux de
   sécurité continuent de s'appliquer aux cueillettes déjà journalisées.
 
@@ -140,8 +134,9 @@ Détail du format et des validations : [Données et confidentialité](donnees-co
 | Réglage | Effet |
 |---|---|
 | **Unités de poids** | kg (métrique) ou lb (impérial) — affichage et saisie ; stockage toujours en kg. |
-| **Clé API Gemini** | Champ masqué, stockage local seulement. Nécessaire à l'identification par photo et aux fiches par IA. |
-| **Ordre des images** | Priorité des sources d'illustration : MycoQuébec, Wikimedia, IA (6 combinaisons possibles). |
+| **Fournisseur d'IA** | Gemini (défaut) ou OpenRouter (multi-modèles, dont des gratuits). |
+| **Clé API Gemini / OpenRouter** | Champs masqués, stockage local seulement. Nécessaires à l'identification par photo et aux fiches par IA. |
+| **Ordre des images** | Priorité des sources d'illustration (Wikimedia, IA). |
 | **Crédits photos** | Écran listant auteur, licence et lien Commons pour chaque photo embarquée. |
 | **Comment identifier** | Rappel de la méthode (checklist, verdicts) et du numéro du centre antipoison. |
 
@@ -151,7 +146,7 @@ Détail du format et des validations : [Données et confidentialité](donnees-co
   et import JSON.
 - Pas de carte interactive intégrée : le lien Google Maps ouvre l'app de cartes du système.
 - Pas de partage public de spots ou de récoltes.
-- **Pas de validation mycologique** : l'app aide à décider, elle ne décide pas. Voir
+- **Pas de validation botanique** : l'app aide à décider, elle ne décide pas. Voir
   [Sécurité alimentaire](securite-alimentaire.md).
 
 Voir aussi : [Guide d'identification](guide-identification.md) ·

@@ -1,6 +1,6 @@
 # Installation
 
-> **Wiki Cueillette Québec — édition Memphis** · [Accueil du dépôt](../README.md) ·
+> **Wiki Cueillette Boréale** · [Accueil du dépôt](../README.md) ·
 > [Index du wiki](README.md)
 
 ## Sommaire
@@ -21,7 +21,7 @@ statiques. Il faut seulement :
 - un hébergement statique en **HTTPS** (GitHub Pages fait la job) ou `localhost` pour les
   tests — le service worker refuse de s'enregistrer sur `file://` et en HTTP non local ;
 - un navigateur moderne : Chrome/Edge (Android, bureau) ou Safari 16+ (iOS) ;
-- environ **25 Mo** d'espace de cache sur l'appareil : l'app embarque 121 photos.
+- quelques mégaoctets d'espace de cache sur l'appareil : l'app embarque ses photos de plantes dans `img/`.
 
 Facultatif :
 
@@ -38,7 +38,7 @@ Facultatif :
 4. Enregistrer. GitHub publie le site en une à deux minutes à l'adresse
    `https://<utilisateur>.github.io/<dépôt>/`.
 
-Pour ce dépôt : <https://jonathancote1984.github.io/cueillette-memphis/>
+Pour ce dépôt : <https://jonathancote1984.github.io/cueillette-boreale/>
 
 Points à savoir :
 
@@ -69,13 +69,13 @@ L'app s'ouvre alors en plein écran (`display: standalone`, orientation portrait
 statut ambre `#D9A441`), comme une app native.
 
 > **Important** : laisser la page ouverte quelques secondes à la première visite. Le service
-> worker télécharge et met en cache l'app, la police, les icônes et les 121 photos. Une fois
+> worker télécharge et met en cache l'app, la police, les icônes et les photos du guide. Une fois
 > l'installation du cache terminée, tout fonctionne sans réseau.
 
 ## Servir l'app en local
 
 ```bash
-cd cueillette-memphis
+cd cueillette-boreale
 python3 -m http.server 8091
 # puis ouvrir http://localhost:8091
 ```
@@ -101,11 +101,11 @@ Le mécanisme de mise à jour de l'app **est** le numéro de cache. Il vit à un
 
 ```js
 // sw.js, ligne 4
-const CACHE = 'cqm-vN';
+const CACHE = 'cqb-vN';
 ```
 
 Règle : **toute** modification de `index.html`, `sw.js`, `manifest.json`, des icônes, des
-polices ou des images exige d'incrémenter `N` (`cqm-v62` → `cqm-v63`, etc.). Sans bump, les
+polices ou des images exige d'incrémenter `N` (`cqb-v3` → `cqb-v4`, etc.). Sans bump, les
 appareils déjà installés continuent de servir l'ancienne version depuis le cache, parfois
 pendant des semaines.
 
@@ -113,16 +113,15 @@ Ce qui se passe au bump :
 
 1. `install` — le nouveau service worker met en cache le socle critique (`./`,
    `index.html`, `manifest.json`, icônes, photos d'espèces, JSON de crédits,
-   `img/mycoquebec.json`, `fonts/fredoka.woff2`) avec `addAll`, puis les 100 photos de
+   `fonts/fredoka.woff2`) avec `addAll`, puis les photos de
    spécificités une par une en tolérant les échecs. Une image manquante ne casse plus
    l'installation.
-2. `activate` — tous les caches dont le nom commence par `cqm-` et qui ne sont pas le cache
+2. `activate` — tous les caches dont le nom commence par `cqb-` et qui ne sont pas le cache
    courant sont supprimés, puis `clients.claim()` prend la main.
 3. `fetch` — réponse depuis le cache d'abord, sinon réseau ; une réponse en erreur n'est
    jamais mise en cache ; le repli HTML est réservé aux navigations.
 
-Jamais mis en cache : `*.wikimedia.org`, `*.googleapis.com`, `*.mycoquebec.org` et toute
-requête dont l'URL contient `key=`.
+Jamais mis en cache : `*.wikimedia.org`, `*.googleapis.com`, `*.openrouter.ai` et toute requête dont l'URL contient `key=`.
 
 Côté utilisateur, la mise à jour s'applique à la fermeture/réouverture de l'app (ou après un
 rechargement forcé). En cas de doute : désinstaller l'app de l'écran d'accueil, vider les
@@ -143,7 +142,7 @@ Exporter).
 | Symptôme | Cause probable | Correctif |
 |---|---|---|
 | L'app ne fonctionne pas hors-ligne | service worker non enregistré (HTTP sur IP, `file://`) | servir en HTTPS ou sur `localhost` |
-| Une vieille version s'affiche après un déploiement | `cqm-vN` non incrémenté dans `sw.js` | bumper le cache, redéployer, rouvrir l'app |
+| Une vieille version s'affiche après un déploiement | `cqb-vN` non incrémenté dans `sw.js` | bumper le cache, redéployer, rouvrir l'app |
 | Photos manquantes hors-ligne | installation du cache interrompue | rouvrir l'app en ligne et laisser terminer, puis revérifier |
 | « Ajouter à l'écran d'accueil » absent | `manifest.json` non servi ou page non HTTPS | vérifier l'adresse et le code de réponse du manifeste |
 | Les fonctions IA échouent | clé absente, invalide, ou quota Google atteint | revalider la clé dans Paramètres ; l'app réessaie et bascule sur un modèle de repli |

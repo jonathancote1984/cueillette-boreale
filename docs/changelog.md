@@ -1,14 +1,21 @@
 # Journal des versions
 
-> **Wiki Cueillette Québec — édition Memphis** · [Accueil du dépôt](../README.md) ·
+> **Wiki Cueillette Boréale** · [Accueil du dépôt](../README.md) ·
 > [Index du wiki](README.md)
 
 Le projet n'a pas de numéro de version applicatif : le repère de livraison est le **numéro de
-cache du service worker** (`cqm-vN`, déclaré dans `sw.js`) et l'historique Git. Ce journal
+cache du service worker** (`cqb-vN`, déclaré dans `sw.js`) et l'historique Git. Ce journal
 résume les grandes itérations ; `git log` reste la référence exacte.
+
+> Les entrées sous « Historique hérité » décrivent le projet d'origine (app champignons
+> cueillette-memphis, toujours en ligne séparément), conservées pour la trace. Cueillette
+> Boréale est un **fork** : les champignons en sont retirés et l'app est réorientée vers
+> 17 plantes et baies boréales.
 
 ## Sommaire
 
+- [Fork boréal (2026-08)](#fork-boréal-2026-08)
+- [Historique hérité](#historique-hérité-projet-dorigine-app-champignons)
 - [Comment lire ce journal](#comment-lire-ce-journal)
 - [Août 2026 — fondations (cqm-v1 à v10)](#août-2026--fondations-cqm-v1-à-v10)
 - [Août 2026 — le guide devient un outil de terrain (v11 à v23)](#août-2026--le-guide-devient-un-outil-de-terrain-v11-à-v23)
@@ -17,7 +24,33 @@ résume les grandes itérations ; `git log` reste la référence exacte.
 - [Août 2026 — audit webapp complet et robustesse de l'IA (v58 à v62)](#août-2026--audit-webapp-complet-et-robustesse-de-lia-v58-à-v62)
 - [Ménage de la documentation](#ménage-de-la-documentation)
 
-## Comment lire ce journal
+## Fork boréal (2026-08)
+
+Cueillette Boréale est un fork séparé de l'app champignons « Cueillette Québec — édition
+Memphis » (`cueillette-memphis`), qui reste en ligne indépendamment. Changements du fork :
+
+- **Contenu** : le guide de 21 champignons est remplacé par **17 plantes et baies boréales
+  du Québec** — 11 comestibles (dont 4 à prudence), 3 toxiques, 3 mortelles. Aucune fiche
+  champignon ne subsiste dans le fork.
+- **Checklist terrain** : les 5 critères sont adaptés aux plantes — **feuille, fruit, tige,
+  odeur, habitat**.
+- **Sécurité alimentaire** : badges revus pour la flore boréale ; confusions mortelles
+  documentées (ciguë maculée vs carotte sauvage, ciguë aquatique à racine cloisonnée, berce
+  laineuse phototoxique, scille penchée vs ail des bois) ; la règle « plus grave gagne »
+  et le filet IA sont conservés à l'identique.
+- **Identité visuelle** : palette **vert sapin** (ivoire `#EFF3EC`, primaire `#1E4D33`,
+  mousse `#5E8C4A`, cuivre `#B5651D`, danger `#A32633`) remplaçant la palette
+  automne/terre.
+- **Nom interne** : base IndexedDB `cqb_bd`, préférences `cqb_*`, cache `cqb-vN`,
+  identifiant d'export `cueillette-boreale`.
+- **IA** : clé Gemini **ou OpenRouter** (multi-modèles), au choix dans les paramètres.
+- **Documentation** : wiki (`docs/`) et guide utilisateur (`guide/`) entièrement réécrits
+  pour le contenu boréal ; [especes-boreales.md](especes-boreales.md) et
+  `especes-boreales.json` deviennent la source de vérité du contenu.
+
+## Historique hérité (projet d'origine, app champignons)
+
+### Comment lire ce journal
 
 - **Passe de critique** : cycle interne de revue où l'app est notée sur 40 ; les constats sont
   classés P0 (bloquant) à P3 (finition) puis corrigés. Les rapports sont archivés dans

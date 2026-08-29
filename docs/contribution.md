@@ -1,6 +1,6 @@
 # Contribution
 
-> **Wiki Cueillette Québec — édition Memphis** · [Accueil du dépôt](../README.md) ·
+> **Wiki Cueillette Boréale** · [Accueil du dépôt](../README.md) ·
 > [Index du wiki](README.md)
 
 Projet personnel, sans équipe : ces conventions servent surtout de mémoire de travail et de
@@ -20,8 +20,8 @@ cadre pour tout contributeur occasionnel (humain ou agent).
 ## Environnement de travail
 
 ```bash
-git clone https://github.com/jonathancote1984/cueillette-memphis.git
-cd cueillette-memphis
+git clone https://github.com/jonathancote1984/cueillette-boreale.git
+cd cueillette-boreale
 python3 -m http.server 8091   # http://localhost:8091
 ```
 
@@ -45,7 +45,7 @@ Fichiers ignorés par Git : `__pycache__/`, `*.pyc`, `.DS_Store`, `Thumbs.db`, `
   dépôt et listée dans `FICHIERS` de `sw.js`.
 - **Auto-hébergement des assets** : police dans `fonts/`, images dans `img/` — aucun appel à
   Google Fonts ou à un CDN d'images.
-- **Le réseau est un bonus** : Wikimedia, MycoQuébec et Gemini sont facultatifs ; l'app doit
+- **Le réseau est un bonus** : Wikimedia et Gemini/OpenRouter sont facultatifs ; l'app doit
   rester pleinement utilisable sans eux.
 
 ## Conventions de code
@@ -85,9 +85,9 @@ bump du service worker quand il y en a un.
 Exemples réels du dépôt :
 
 ```
-feat(etapes): feuille variété en 2 étapes progressives … — SW bump cqm-v48
+feat(etapes): feuille variété en 2 étapes progressives … — SW bump cqb-v3
 fix(ia): fallback on 404 and add timeout to Gemini calls
-chore(sw): bump cache to cqm-v62
+chore(sw): bump cache to cqb-v3
 docs: audit webapp complet (3 axes) — AUDIT_RAPPORT.md consolidé
 ```
 
@@ -101,7 +101,7 @@ seulement le fichier touché.
       checklist, exporter, réimporter ;
 - [ ] aucune régression de sécurité : un badge vert ne peut apparaître sur une espèce non
       comestible, et une alerte mortelle affiche le centre antipoison ;
-- [ ] `cqm-vN` incrémenté dans `sw.js` si un fichier servi a changé ;
+- [ ] `cqb-vN` incrémenté dans `sw.js` si un fichier servi a changé ;
 - [ ] nouvelles ressources ajoutées à `FICHIERS` dans `sw.js` et créditées dans le
       `credits.json` correspondant ;
 - [ ] tokens de design respectés (bordure 3 px, ombre sans flou, coin cassé, rouge = danger) ;
@@ -132,7 +132,7 @@ Règle : **ne jamais recopier le numéro de cache courant dans la documentation.
 | `scripts/telecharger_photos.py` | re-télécharge les photos d'espèces depuis Wikimedia Commons et met à jour les crédits | requests |
 
 Après exécution : vérifier les crédits, ajouter les fichiers à `FICHIERS` si nécessaire, puis
-bumper `cqm-vN`.
+bumper `cqb-vN`.
 
 ## Limites non négociables
 

@@ -1,5 +1,10 @@
 # Audit qualité code & architecture — Cueillette Québec (édition Memphis)
 
+> ⚠️ **Document historique** : ce rapport porte sur l'app champignons d'origine
+> (cueillette-memphis), avant le fork boréal. Les chiffres et espèces cités décrivent
+> l'état d'alors ; la source de vérité actuelle est [especes-boreales.md](especes-boreales.md).
+
+
 **Date :** 16 août 2026 — **Portée :** analyse statique du JS inline d'`index.html` (~2 090 lignes, script unique démarrant ligne 748) + `sw.js` (166 lignes). **Méthode :** lecture intégrale du code, extraction du JS (`sed` + `node --check` : syntaxe OK), greps ciblés (duplication, rejets, races, XSS), vérifications des données réelles (`img/mycoquebec.json` : 3 938 entrées, 103 noms avec apostrophe).
 
 **Convention de lignes :** le JS inline d'`index.html` commence à la ligne 748 (`<script>`), ligne 749 = 1re ligne de code. Les références `index.html:NNN` désignent les lignes du fichier réel. Les références `sw.js:NNN` sont directes.
