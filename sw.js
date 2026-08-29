@@ -1,0 +1,178 @@
+/* Service worker — cache-first PWA (édition Memphis).
+   ⚠️ RÈGLE : à CHAQUE mise à jour de l'app, AUGMENTEZ le numéro de CACHE.
+   Le bump IS le mécanisme de mise à jour pour les utilisateurs. */
+const CACHE = 'cqb-v1';
+const FICHIERS = [
+  './index.html',
+  './manifest.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/icon-maskable-512.png',
+  './img/especes/chanterelle.jpg',
+  './img/especes/chanterelle-tube.jpg',
+  './img/especes/cepe.jpg',
+  './img/especes/bolet-bai.jpg',
+  './img/especes/pied-mouton.jpg',
+  './img/especes/morille.jpg',
+  './img/especes/pleurote.jpg',
+  './img/especes/coprin.jpg',
+  './img/especes/lepiote.jpg',
+  './img/especes/amanite-rougissante.jpg',
+  './img/especes/bolet-amer.jpg',
+  './img/especes/tue-mouches.jpg',
+  './img/especes/panthere.jpg',
+  './img/especes/entolome.jpg',
+  './img/especes/paxille.jpg',
+  './img/especes/fausse-chanterelle.jpg',
+  './img/especes/phalloide.jpg',
+  './img/especes/vireuse.jpg',
+  './img/especes/galerine.jpg',
+  './img/especes/gyromitre.jpg',
+  './img/especes/lepiote-brunatre.jpg',
+  './img/specs/amanite-rougissante-1.jpg',
+  './img/specs/amanite-rougissante-2.jpg',
+  './img/specs/amanite-rougissante-3.jpg',
+  './img/specs/amanite-rougissante-4.jpg',
+  './img/specs/amanite-rougissante-5.jpg',
+  './img/specs/bolet-amer-1.jpg',
+  './img/specs/bolet-amer-2.jpg',
+  './img/specs/bolet-amer-3.jpg',
+  './img/specs/bolet-amer-4.jpg',
+  './img/specs/bolet-amer-5.jpg',
+  './img/specs/bolet-bai-1.jpg',
+  './img/specs/bolet-bai-2.jpg',
+  './img/specs/bolet-bai-3.jpg',
+  './img/specs/bolet-bai-4.jpg',
+  './img/specs/bolet-bai-5.jpg',
+  './img/specs/cepe-1.jpg',
+  './img/specs/cepe-2.jpg',
+  './img/specs/cepe-3.jpg',
+  './img/specs/cepe-4.jpg',
+  './img/specs/cepe-5.jpg',
+  './img/specs/chanterelle-tube-1.jpg',
+  './img/specs/chanterelle-tube-2.jpg',
+  './img/specs/chanterelle-tube-3.jpg',
+  './img/specs/chanterelle-tube-4.jpg',
+  './img/specs/chanterelle-tube-5.jpg',
+  './img/specs/coprin-1.jpg',
+  './img/specs/coprin-2.jpg',
+  './img/specs/coprin-3.jpg',
+  './img/specs/coprin-4.jpg',
+  './img/specs/coprin-5.jpg',
+  './img/specs/entolome-1.jpg',
+  './img/specs/entolome-2.jpg',
+  './img/specs/entolome-3.jpg',
+  './img/specs/entolome-4.jpg',
+  './img/specs/entolome-5.jpg',
+  './img/specs/fausse-chanterelle-1.jpg',
+  './img/specs/fausse-chanterelle-2.jpg',
+  './img/specs/fausse-chanterelle-3.jpg',
+  './img/specs/fausse-chanterelle-4.jpg',
+  './img/specs/fausse-chanterelle-5.jpg',
+  './img/specs/galerine-1.jpg',
+  './img/specs/galerine-2.jpg',
+  './img/specs/galerine-3.jpg',
+  './img/specs/galerine-4.jpg',
+  './img/specs/galerine-5.jpg',
+  './img/specs/gyromitre-1.jpg',
+  './img/specs/gyromitre-2.jpg',
+  './img/specs/gyromitre-3.jpg',
+  './img/specs/gyromitre-4.jpg',
+  './img/specs/gyromitre-5.jpg',
+  './img/specs/lepiote-1.jpg',
+  './img/specs/lepiote-2.jpg',
+  './img/specs/lepiote-3.jpg',
+  './img/specs/lepiote-4.jpg',
+  './img/specs/lepiote-5.jpg',
+  './img/specs/lepiote-brunatre-1.jpg',
+  './img/specs/lepiote-brunatre-2.jpg',
+  './img/specs/lepiote-brunatre-3.jpg',
+  './img/specs/lepiote-brunatre-4.jpg',
+  './img/specs/lepiote-brunatre-5.jpg',
+  './img/specs/morille-1.jpg',
+  './img/specs/morille-2.jpg',
+  './img/specs/morille-3.jpg',
+  './img/specs/morille-4.jpg',
+  './img/specs/morille-5.jpg',
+  './img/specs/panthere-1.jpg',
+  './img/specs/panthere-2.jpg',
+  './img/specs/panthere-3.jpg',
+  './img/specs/panthere-4.jpg',
+  './img/specs/panthere-5.jpg',
+  './img/specs/paxille-1.jpg',
+  './img/specs/paxille-2.jpg',
+  './img/specs/paxille-3.jpg',
+  './img/specs/paxille-4.jpg',
+  './img/specs/paxille-5.jpg',
+  './img/specs/phalloide-1.jpg',
+  './img/specs/phalloide-2.jpg',
+  './img/specs/phalloide-3.jpg',
+  './img/specs/phalloide-4.jpg',
+  './img/specs/phalloide-5.jpg',
+  './img/specs/pied-mouton-1.jpg',
+  './img/specs/pied-mouton-2.jpg',
+  './img/specs/pied-mouton-3.jpg',
+  './img/specs/pied-mouton-4.jpg',
+  './img/specs/pied-mouton-5.jpg',
+  './img/specs/pleurote-1.jpg',
+  './img/specs/pleurote-2.jpg',
+  './img/specs/pleurote-3.jpg',
+  './img/specs/pleurote-4.jpg',
+  './img/specs/pleurote-5.jpg',
+  './img/specs/tue-mouches-1.jpg',
+  './img/specs/tue-mouches-2.jpg',
+  './img/specs/tue-mouches-3.jpg',
+  './img/specs/tue-mouches-4.jpg',
+  './img/specs/tue-mouches-5.jpg',
+  './img/specs/vireuse-1.jpg',
+  './img/specs/vireuse-2.jpg',
+  './img/specs/vireuse-3.jpg',
+  './img/specs/vireuse-4.jpg',
+  './img/specs/vireuse-5.jpg',
+  './img/specs/credits.json',
+  './img/especes/credits.json',
+  './img/mycoquebec.json',
+  './fonts/fredoka.woff2'
+];
+
+self.addEventListener('install', e => {
+  // AUDIT M8 (2026-08) : une ressource manquante ne doit plus tuer l'installation —
+  // socle critique en addAll, images en add() individuel tolérant
+  const SOCLE = FICHIERS.filter(f => !f.startsWith('./img/specs/'));
+  const IMAGES = FICHIERS.filter(f => f.startsWith('./img/specs/'));
+  e.waitUntil(caches.open(CACHE).then(c =>
+    c.addAll(SOCLE).catch(() => {}).then(() =>
+      Promise.allSettled(IMAGES.map(f => c.add(f)))
+    )
+  ).then(() => self.skipWaiting()));
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys().then(cles => Promise.all(cles.filter(c => c.startsWith('cqb-') && c !== CACHE).map(c => caches.delete(c))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
+  const url = new URL(e.request.url);
+  // API et requêtes avec clé : jamais de cache (résultats frais, clé jamais stockée)
+  // Wiki docsify (/docs/) et guide (/guide/) : jamais mis en cache ni interceptés — toujours à jour
+  if (url.origin === self.location.origin && (url.pathname.includes('/docs/') || url.pathname.includes('/guide/'))) return;
+  if (url.hostname.endsWith('wikimedia.org') || url.hostname.endsWith('googleapis.com') || url.hostname.endsWith('mycoquebec.org') || url.search.includes('key=')) return;
+  e.respondWith(
+    caches.match(e.request).then(reponse => reponse || fetch(e.request).then(r => {
+      // AUDIT M13 : ne jamais empoisonner le cache avec une réponse d'erreur
+      if (r.ok || r.type === 'opaque') {
+        const copie = r.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copie)).catch(() => {});
+      }
+      return r;
+    }).catch(() => {
+      // AUDIT M9 : le fallback HTML est réservé aux navigations — jamais aux images/JSON
+      if (e.request.mode === 'navigate') return caches.match('./index.html');
+      return Response.error();
+    }))
+  );
+});
