@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#D9A441">
+<meta name="theme-color" content="#1E4D33">
 <meta name="description" content="Spots, identification et journal de cueillette de plantes et baies boréales du Québec — édition Memphis, 100 % hors-ligne.">
 <title>Cueillette Boréale — édition Memphis</title>
 <meta name="mobile-web-app-capable" content="yes">
@@ -21,10 +21,10 @@
   font-weight:400 700; font-style:normal; font-display:swap;
 }
 :root{
-  --creme:#F3E8D5; --noir:#241A0F; --blanc:#FDF6E7;
-  --rouge:#B3261E; --gris:#A89882;
-  --ambre:#D9A441; --olive:#6F8F3E; --cuir:#8A5A2B;
-  --rouille:#B45309; --terracotta:#B94527;
+  --creme:#EFF3EC; --noir:#0F2418; --blanc:#F8FBF6;
+  --rouge:#A32633; --gris:#83987F;
+  --ambre:#1E4D33; --olive:#5E8C4A; --cuir:#3A5C42;
+  --rouille:#4C7A55; --terracotta:#B5651D;
 }
 *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
 html,body{margin:0;padding:0;}
@@ -34,13 +34,13 @@ body{
   background:var(--creme); color:var(--noir);
   padding-bottom:calc(96px + env(safe-area-inset-bottom));
   font-size:16px;
-  background-image:radial-gradient(circle, rgba(36,26,15,.10) 2px, transparent 2.4px);
+  background-image:radial-gradient(circle, rgba(15,36,24,.10) 2px, transparent 2.4px);
   background-size:28px 28px;
 }
 /* ===== Header Memphis ===== */
 header{
   position:sticky; top:0; z-index:50;
-  background:linear-gradient(135deg,#C87224,#D9A441);
+  background:linear-gradient(135deg,#1E4D33,#1E4D33);
   border-bottom:3px solid var(--noir);
   padding:12px 14px 0;
   overflow:hidden;
@@ -228,7 +228,7 @@ h2.titre-vue .ico{font-size:20px;}
   border:3px solid var(--noir); border-radius:16px 16px 16px 5px;
   padding:10px 13px; font-size:12.5px; line-height:1.5; font-weight:500;
   box-shadow:3px 3px 0 var(--noir); margin-bottom:12px;
-  background:repeating-linear-gradient(45deg, rgba(217,164,65,.25), rgba(217,164,65,.25) 8px, transparent 8px, transparent 16px), var(--blanc);
+  background:repeating-linear-gradient(45deg, rgba(30,77,51,.18), rgba(30,77,51,.18) 8px, transparent 8px, transparent 16px), var(--blanc);
 }
 /* ===== Feuilles (bottom sheets) ===== */
 .voile{
@@ -384,7 +384,7 @@ h2.titre-vue .ico{font-size:20px;}
   </div>
   <div class="titre-ligne">
     <svg width="52" height="52" viewBox="0 0 64 64" aria-hidden="true">
-      <rect x="4" y="4" width="56" height="56" rx="16" fill="#D9A441" stroke="#241A0F" stroke-width="4"/>
+      <rect x="4" y="4" width="56" height="56" rx="16" fill="#1E4D33" stroke="#241A0F" stroke-width="4"/>
       <path d="M15 40 Q15 19 32 19 Q49 19 49 40 Z" fill="#B3261E" stroke="#241A0F" stroke-width="3"/>
       <circle cx="24" cy="27" r="3" fill="#FDF6E7"/>
       <circle cx="33" cy="22" r="3" fill="#FDF6E7"/>
@@ -392,8 +392,8 @@ h2.titre-vue .ico{font-size:20px;}
       <rect x="27" y="37" width="10" height="16" rx="4" fill="#FDF6E7" stroke="#241A0F" stroke-width="3"/>
     </svg>
     <div>
-      <h1>Cueillette Québec</h1>
-      <p class="sous" id="sous-titre">🍄 Carnet de champignons · édition Memphis</p>
+      <h1>Cueillette Boréale</h1>
+      <p class="sous" id="sous-titre">🌲 Carnet de plantes boréales · édition Memphis</p>
     </div>
     <span class="pastille" id="badge" title="Cueillettes enregistrées">0</span>
     <button class="btn-retour" id="btn-retour" onclick="fermerDetail()" aria-label="Retour au guide">←</button>
@@ -424,7 +424,7 @@ h2.titre-vue .ico{font-size:20px;}
       <button class="btn btn-vert btn-plein" onclick="identifierParPhoto(false)">🖼️ Une photo</button>
     </div>
     <div id="g-cle-bandeau"></div>
-    <input class="saisie" id="g-recherche" placeholder="🔎 Chercher un champignon…" aria-label="Chercher un champignon" style="margin-bottom:10px">
+    <input class="saisie" id="g-recherche" placeholder="🔎 Chercher une plante ou un champignon…" aria-label="Chercher une plante ou un champignon" style="margin-bottom:10px">
     <div id="g-filtres"></div>
     <div id="liste-guide"></div>
   </section>
@@ -473,7 +473,7 @@ h2.titre-vue .ico{font-size:20px;}
     </div>
     <div class="carte">
       <h3 style="margin:0 0 10px">🤖 Fournisseur d'IA</h3>
-      <p class="note" style="margin-bottom:8px">Choisissez le service qui identifie les champignons (photo) et rédige les fiches. <b>Gemini</b> : le meilleur rapport qualité/prix, tout-en-un. <b>OpenRouter</b> : accès à de nombreux modèles (dont des gratuits) avec une seule clé.</p>
+      <p class="note" style="margin-bottom:8px">Choisissez le service qui identifie les espèces (photo) et rédige les fiches. <b>Gemini</b> : le meilleur rapport qualité/prix, tout-en-un. <b>OpenRouter</b> : accès à de nombreux modèles (dont des gratuits) avec une seule clé.</p>
       <select class="saisie" id="p-provider" aria-label="Fournisseur d'IA" style="margin-bottom:8px">
         <option value="gemini">🇬 Google Gemini (recommandé)</option>
         <option value="openrouter">🌐 OpenRouter (multi-modèles)</option>
@@ -528,7 +528,7 @@ h2.titre-vue .ico{font-size:20px;}
     </div>
     <div class="carte">
       <h3 style="margin:0 0 10px">🍄 Comment identifier</h3>
-      <p class="note" style="margin-bottom:8px">Chaque fiche du guide propose une checklist de <b>spécificités à repérer</b> (chapeau, lames, pied, odeur, habitat). Cochez chaque critère sur le champignon réel avant de décider.</p>
+      <p class="note" style="margin-bottom:8px">Chaque fiche du guide propose une checklist de <b>spécificités à repérer</b> (feuille, fruit, tige, odeur, habitat — ou chapeau/lames pour les champignons). Cochez chaque critère sur l'espèce réelle avant de décider.</p>
       <div style="font-size:13.5px;line-height:1.7">
         <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:6px"><span class="pastille-statut" style="background:var(--ambre);color:var(--noir);transform:none">⚠️</span><span><b>Rien n'est encore vérifié</b> — ne consommez pas. Cochez les critères un à un.</span></div>
         <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:6px"><span class="pastille-statut" style="background:var(--olive);color:var(--noir);transform:none">✅</span><span><b>Tous les critères correspondent</b> — espèce comestible ou à cuisson obligatoire : récolte possible en respectant la prudence.</span></div>
@@ -895,7 +895,96 @@ const Stockage = (() => {
 })();
 
 /* ================= Guide des espèces (Québec) ================= */
-const ESPECES = [
+/* ================= Plantes et baies boréales (guide principal) ================= */
+const PLANTES_BOREALES = [
+{id:'bleuet', img:null, nom:'Bleuet nain', latin:'Vaccinium angustifolium', statut:'comestible', prudence:false,
+ saison:'Juillet à août', habitat:'Tourbières, coteaux rocheux, coupes forestières, landes à bleuets (Saguenay–Lac-Saint-Jean, Côte-Nord).',
+ desc:'Petit arbuste 20-50 cm à feuilles ovales dentées. Fleurs blanches en clochettes, baies bleu-noir à « couronne » (calice) au sommet, pruine bleuâtre. Le fruit emblématique du boréal, excellent cru, congelé ou en confiture.',
+ carac:['Arbrisseau bas 20-50 cm, tiges anguleuses vertes','Feuilles ovales finement dentées, vert lustré','Baies bleu-noir avec couronne (calice) au sommet','Chair pourpre, graines minuscules','Fleurs en clochettes blanches/rosées au printemps'],
+ confusions:'Aucune confusion mortelle au Québec. La morelle noire (toxique) a des baies noires luisantes SANS couronne, feuilles en forme de lance non dentées et fleurs blanches en étoile retombante — pousse en friches, pas en landes.'},
+{id:'camarine', img:null, nom:'Camarine noire', latin:'Empetrum nigrum', statut:'comestible', prudence:false,
+ saison:'Août à septembre', habitat:'Toundra, tourbières, dunes et landes sableuses (Basse-Côte-Nord, Anticosti).',
+ desc:'Sous-arbrisseau rampant touffu semblable à un petit conifère. Baies noires luisantes de 6-8 mm au jus violet, goût doux et aqueux. Traditionnelle chez les Innu et les Côtiers.',
+ carac:['Tiges tapissantes à feuilles en aiguilles, comme un mini-sapin','Baies noires luisantes, 5-8 mm, à 6 graines','Fleurs minuscules roses, solitaires','Coussins denses sur sol acide sablonneux'],
+ confusions:'Aucune confusion dangereuse connue; ne pas confondre avec le raisin d\'ours (Arctostaphylos uva-ursi, non toxique mais fade et astringent, feuilles coriaces persistantes plus grandes).'},
+{id:'chicoute', img:null, nom:'Chicouté (plaquebière)', latin:'Rubus chamaemorus', statut:'comestible', prudence:false,
+ saison:'Mi-juillet à août', habitat:'Tourbières, marais sphaigne, toundra arbustive (Côte-Nord, Ungava, Gaspésie).',
+ desc:'Baie ambrée à or avec arôme de miel et d\'abricot, unique sur plante femelle à feuille palmée lobée. Fruit roi du Nord, très périssable. Appelée cloudberry en anglais, plaquebière au Saguenay.',
+ carac:['Feuille unique palmée à 5 lobes, ridée','Fleur blanche solitaire (plante mâle/femelle séparées)','Baie ambrée-orangée, change de couleur (rouge immature)','Habitat: tourbière à sphaigne, jamais en forêt sèche'],
+ confusions:'Aucune confusion mortelle au stade fruit; ne pas confondre les jeunes feuilles avec celles du potentille — elles poussent dans des milieux très différents.'},
+{id:'framboise', img:null, nom:'Framboisier commun', latin:'Rubus idaeus', statut:'comestible', prudence:false,
+ saison:'Juillet à septembre', habitat:'Bords de chemin, coupes, lisières, friches humides; aime les terres brûlées.',
+ desc:'Arbrisseau à tiges épineuses blanchâtres sous les feuilles. Baie rouge qui se détache de son réceptacle blanc (cœur creux). Fruit frais très parfumé; feuilles en tisane.',
+ carac:['Tiges à épines fines blanchâtres et duvet blanc','Feuille composée 3-5 folioles, revers blanchâtre','Fruit qui se détache en creux (cœur creux)','Fleurs blanches à 5 pétales, mai-juin'],
+ confusions:'Framboise arctique (Rubus arcticus, comestible). Ne pas confondre le fruit avec la baie de morelle noire (toxique) qui ne pousse pas sur ronce épineuse.'},
+{id:'fraise-sauvage', img:null, nom:'Fraise sauvage', latin:'Fragaria virginiana', statut:'comestible', prudence:false,
+ saison:'Juin à juillet', habitat:'Clairières, bords de chemin, prairies, berges ensoleillées.',
+ desc:'Petite fraise parfumée (2 cm) suspendue au-dessus des feuilles trifoliées dentées. Goût intense, bien supérieur à la fraise cultivée.',
+ carac:['Fleur blanche à 5 pétales, centre jaune','Feuille trifoliée à dents marquées','Fruit rouge, calice appliqué, aiguilles graines enfoncées','Stolons coureurs (stolons) qui s\'enracinent'],
+ confusions:'Faux fraisier (Potentilla indica, non toxique mais insipide, fruit dressé). Attention: la potentille anserine a un fruit sec — pas une baie.'},
+{id:'amelanchier', img:null, nom:'Amélanchier (petit poirier)', latin:'Amelanchier alnifolia', statut:'comestible', prudence:false,
+ saison:'Juillet à août', habitat:'Bosquets, lisières, berges, pentes rocheuses; partout au Québec.',
+ desc:'Arbuste 2-6 m aux baies violet-noir sucrées (appelées poires, saskatoon dans l\'Ouest). Fleurs blanches en grappe avant les feuilles. Feuille ovale dentée; écorce grise lisse. En confitures, muffins, ou séché comme fruit.',
+ carac:['Baie pourpre-noir 8-12 mm à couronne en étoile','Feuille ovale dentée, dessus glabre','Fleurs blanches en grappe lâche en mai','Écorce grise lisse, branches à port dressé'],
+ confusions:'Nerprun bourdaine (Rhamnus cathartica, toxique, purge) : fruits noirs en grappe, feuille à 3 paires de nervures courbes, écorce piquante d\'odeur médicamenteuse. Ne jamais confondre.'},
+{id:'vigne-rivages', img:null, nom:'Vigne des rivages', latin:'Vitis riparia', statut:'comestible', prudence:false,
+ saison:'Septembre à octobre (après gel, plus sucrée)', habitat:'Rives, bordures de forêt, clôtures, milieux perturbés — grimpante partout au sud du Québec.',
+ desc:'Vigne sauvage vigoureuse à écorce qui se détache en lanières. Grappes de baies pourpres à pruine, goût âcre qui s\'améliore après gel. Feuille sinueuse-dentée, glabre dessous. Excellent jus et gelée.',
+ carac:['Grimpante à vrilles opposées aux feuilles','Feuille grande, cordiforme, dentée, glabre dessous','Écorce qui se détache en bandes fibreuses','Grappes de baies pourpres, jus violet','Goût acidulé qui s\'adoucit après gel'],
+ confusions:'Vigne-vierge (Parthenocissus, non comestible mais non mortelle): feuilles dentées plus découpées, vrilles à petites ventouses. Les baies très amères (racémose) et en petites grappes clairsemées.'},
+{id:'aralie', img:null, nom:'Aralie à grappes (fausse salsepareille)', latin:'Aralia racemosa', statut:'comestible', prudence:false,
+ saison:'Août à septembre', habitat:'Sous-bois riches, talus, lisières; partout dans le sud du Québec.',
+ desc:'Plante herbacée 1-2 m à grosse racine aromatique. Grappes de baies rouges sombres à saveur balsamique. Utilisée en sirop, sirop de racine (root beer), sirop contre la toux. Racine récoltée à l\'automne.',
+ carac:['Grosse tige robuste, souvent violacée','Grandes feuilles composées pennées','Grappes de baies rouges en ombelle','Odeur balsamique de la racine au déterrement'],
+ confusions:'Aralie à grappes vs aralie épineuse (Aralia hispida, non toxique mais différente). Ne pas confondre avec le sureau; racine d\'aralie aromatique ≠ racine de ciguë (jamais creuse ici).'},
+{id:'ail-des-bois', img:null, nom:'Ail des bois (ail rampant)', latin:'Allium tricoccum', statut:'comestible', prudence:true,
+ saison:'Avril à juin (feuille), août (graine)', habitat:'Érablières riches, sous-bois humides, fonds de vallée.',
+ desc:'Oignon sauvage au goût d\'ail puissant, 2-3 feuilles larges brillantes fanant à la floraison. Récolte encadrée (espèce vulnérable : 1 bulbe/fleur par année, jamais les racines). Utiliser feuille et bulbe, cru ou cuit.',
+ carac:['2-3 feuilles larges (5-8 cm), vert franc, odeur d\'ail puissante','Odeur d\'ail dès qu\'on froisse la feuille — test décisif','Fleur blanche en ombelle, juin','Bulbe allongé blanc, racines fines'],
+ confusions:'Scille penchée (toxique, nausée, bradycardie) : feuilles identiques mais SANS ODEUR D\'AIL. Sept-triumphalis (Convallaria, muguet) : aussi sans odeur. Règle : si ça ne sent pas l\'ail, on ne mange pas.'},
+{id:'fougere-aigle', img:null, nom:'Fougère-aigle (jeunes crosses)', latin:'Pteridium aquilinum', statut:'comestible', prudence:true,
+ saison:'Mai à début juin (croisements de 15-30 cm seulement)', habitat:'Bords de chemin, coupes, terrains secs, brûlis, friches.',
+ desc:'Les jeunes crosses en crosse de violon (croustillantes) sont un classique de la cueillette québécoise, à blanchir et bien cuire. Attention: la plante adulte est toxique (ptaquiloside); les crosses doivent être bien enroulées, à laine peu dense.',
+ carac:['Croisillon en forme de violon, laine légère','Tige lisse, creuse, cassante, vert franc','Petites feuilles dentelées en éventail au bout','Pousse en colonies sur sol sec et sableux'],
+ confusions:'La fougère-femelle (comestible aussi) et la fougère-autruche (comestible) sont différentes. Confusion possible avec la fougère d\'autruche (comestible). S\'assurer que la crosse est ENROULÉE et la base NON duveteuse (prudence).'},
+{id:'sureau', img:null, nom:'Sureau du Canada (fleurs et baies cuites)', latin:'Sambucus canadensis', statut:'comestible', prudence:true,
+ saison:'Fleurs juin-juillet, baies août-septembre', habitat:'Berges, milieux humides, friches, bords de chemin.',
+ desc:'Arbuste aux grandes ombelles plates de fleurs blanches (sirop, beignets) puis de baies pourpres. Cuit obligatoirement (feuilles, fleurs crues et baies crues = légère toxicité due à des glycosides cyanogènes).',
+ carac:['Arbuste 2-3 m, écorce lenticellée','Feuille composée à 5-7 folioles lancéolées','Ombelle plate, fleurs blanches à parfum sucré','Baies pourpres foncées en grappe retombante (août)'],
+ confusions:'Sureau blanc (Sambucus racemosa, baies rouges en cône, toxiques crues) et la clintonie (baie bleue non comestible). Toujours cuire fleurs et baies; ne jamais manger de baie verte.'},
+{id:'cigue-maculee', img:null, nom:'Ciguë maculée', latin:'Conium maculatum', statut:'mortel', prudence:false,
+ saison:'Toute la saison (juin-septembre, plante adulte)', habitat:'Fossés, berges, friches, terrains vagues, bords de chemins.',
+ desc:'La plante la plus mortelle du Québec : une poignée de feuilles ou quelques graines tuent un adulte (paralysie respiratoire — la boisson de Socrate). Touche glabre avec taches pourpres, odeur de souris/rat repoussante. À connaître absolument.',
+ carac:['Tige lisse, creuse, avec taches pourpres à la base','Feuilles fines très découpées, odeur de souris/moisi','Fleurs blanches en ombelle plate','Plante 1,5-2,5 m, glabre et creuse','Sève claire, pas de lait'],
+ confusions:'Carotte sauvage (Daucus carota, comestible): tige HÉRISSÉE de poils, sans taches, odeur de carotte, fleur plate à 1 point rouge central. Ciguë aquatique (mortelle aussi): habitat riverain, tubercule. En cas de doute: NE PAS TOUCHER.'},
+{id:'cigue-aquatique', img:null, nom:'Ciguë aquatique (grand ciguë)', latin:'Cicuta virosa', statut:'mortel', prudence:false,
+ saison:'Toute la saison (mai-octobre, racine toxique en tout temps)', habitat:'Marais, fossés, berges, eaux peu profondes; partout au Québec.',
+ desc:'La plante LA PLUS MORTELLE d\'Amérique du Nord : une racine de la taille d\'une carotte tue un adulte en 15 minutes (convulsions, asphyxie). Racine à cloisons transversales. Confusion avec la carotte sauvage, le cerfeuil, la panais — toujours vérifier l\'habitat et les cloisons.',
+ carac:['Plante 0,8-1,5 m, tige creuse glabre','Feuilles finement découpées 2-3 fois','Racine en grappe, avec CHAMBRES à air (cloisons transversales en coupe)','Ombelle blanche plate, juillet-août','Milieu toujours humide (marais, fossé)'],
+ confusions:'Carotte sauvage (tige poilu, odeur de carotte), cerfeuil, angélique — TOUTES poussent en sol plus sec ou différent. Règle de survie: aucune Ombellifère des marais n\'est consommée sans identification experte de la racine.'},
+{id:'morelle-noire', img:null, nom:'Morelle noire', latin:'Solanum nigrum', statut:'toxique', prudence:false,
+ saison:'Juillet à octobre', habitat:'Friches, jardins, bords de chemin, terrains vagues, décombres.',
+ desc:'Herbe dressée ou étalée 20-60 cm à baies noires luisantes en petits bouquets. Toutes les parties vertes sont toxiques (solanine). Les baies mûres sont parfois consommées cuites dans certaines cultures — hors de question ici.',
+ carac:['Baies noires mat, 6-10 mm, non luisantes','Feuille ovale, dentée grossièrement, à l\'odeur forte','Fleur blanche à 5 pétales renversés, centre jaune','Fruit en petites grappes pendantes'],
+ confusions:'Bleuet terrestre (comestible) : baie avec couronne, feuille dentée différente, plante ligneuse. Morelle douce-amère (Solanum dulcamara) : grappe luisante, aussi toxique.'},
+{id:'datura', img:null, nom:'Datura stramoine', latin:'Datura stramonium', statut:'mortel', prudence:false,
+ saison:'Juin à octobre (toute plante toxique)', habitat:'Friches riches, bords de champs, dépotoirs, composts; sud du Québec.',
+ desc:'Plante annuelle dressée à grande fleur blanche en trompette et capsule épineuse (pomme épineuse). TOUTE LA PLANTE est toxique-hallucinogène et potentiellement létale (alcaloïdes tropaniques). Une seule graine peut tuer un enfant.',
+ carac:['Grande fleur blanche en trompette (10-20 cm), parfum nocturne','Capsule épineuse de la taille d\'une balle de golf','Feuille grande, ovale, à l\'odeur fétide','Tige glabrescente à teinte pourpre','Fréquente en sol riche perturbé'],
+ confusions:'Aucune comestible. Risque de confusion avec le lis ou la fleur d\'ornement — jamais les fleurs en trompette ne se consomment.'},
+{id:'phytolague', img:null, nom:'Raisin d\'Amérique (phytolacque)', latin:'Phytolacca americana', statut:'toxique', prudence:false,
+ saison:'Août à octobre', habitat:'Friches, bords de chemins, terrains vagues, lisières; surtout au sud du fleuve.',
+ desc:'Grande herbe (2-3 m) à grappes de baies noires-pourpres luisantes sur pédoncules rouges, tige souvent rouge. Toutes les parties sont toxiques (racine surtout). Les jeunes pousses sont comestibles après double cuisson — mais c\'est une plante pour experts, pas pour cueilleurs occasionnels.',
+ carac:['Tige robuste rosée/violacée','Grappes de baies pourpres noires, jus pourpre vif','Feuilles grandes, lancéolées, vert tendre','Racine blanche épaisse (très toxique crue)'],
+ confusions:'Aucune confusion mortelle courante au Québec; ne pas confondre les baies avec celles du sureau (grappes aplaties, feuille opposée en bouquet).'},
+{id:'berce-laineuse', img:null, nom:'Berce laineuse (berce du Canada)', latin:'Heracleum maximum', statut:'toxique', prudence:true,
+ saison:'Juin à août', habitat:'Berges, fossés, lisières humides, clairières; très commune.',
+ desc:'Grande ombellifère indigène (1-2,5 m) à fleurs blanches en parasol. Sa sève REND LA PEAU PHOTOSENSIBLE (phytophotodermatite grave, ampoules au soleil). Confusion mortelle possible avec la berce du Caucase (invasive, encore plus dangereuse) et la ciguë maculée.',
+ carac:['Grande ombelle blanche, plate, 20-30 cm','Feuille très grande, lobée, dessous duveteux','Tige creuse, épaisse, hérissée de poils','Sève qui brûle la peau au soleil','Pousse en bord d\'eau, lisière humide'],
+ confusions:'Angélique (comestible, mais aussi phototoxique), carotte sauvage (tige hérisée), panais sauvage (sève aussi phototoxique). Règle: JAMAIS d\'ombellifère cueillie sans identification parfaite, gants si on la manipule.'},
+];
+
+const CHAMPIGNONS_BONUS = [
 {id:'chanterelle', img:'img/especes/chanterelle.jpg', nom:'Chanterelle commune', latin:'Cantharellus cibarius', statut:'comestible', prudence:false,
  saison:'Juillet à octobre', habitat:'Forêts de feuillus et conifères, souvent sous érables et bouleaux, dans la mousse.',
  desc:'Le roi de la cueillette au Québec. Chapeau jaune orangé vif en entonnoir, pas de vraies lames mais des veines épaisses descendant sur le pied. Odeur d\'abricot. Excellent en cuisine, se conserve bien séché.',
@@ -1002,6 +1091,9 @@ const ESPECES = [
  carac:['Petite taille (5–8 cm)','Chapeau brun-rosé écailleux','Anneau FIXE (ne coulisse pas)','Lames blanches'],
  confusions:'⚠️ Avec la lépiote élevée (comestible) : taille, couleur du chapeau et anneau coulissant sont les indices décisifs.'}
 ];
+
+/* Guide principal = plantes boréales; champignons conservés en bonus */
+const ESPECES = [...PLANTES_BOREALES, ...CHAMPIGNONS_BONUS];
 const STATUTS = {
   comestible: { label: 'Comestible', cls: 'st-comestible' },
   prudence: { label: 'Comestible — prudence', cls: 'st-prudence' },
@@ -1113,7 +1205,7 @@ function naviguer(vue) {
   fab.setAttribute('aria-label', vue === 'spots' ? 'Ajouter un spot' : vue === 'cueillettes' ? 'Ajouter une cueillette' : 'Nouvelle variété');
   $('btn-retour').classList.toggle('visible', vue === 'detail');
   if (vue !== 'detail') {
-    $('sous-titre').textContent = '🍄 Carnet de champignons · édition Memphis';
+    $('sous-titre').textContent = '🌲 Carnet de plantes boréales · édition Memphis';
     $('badge').style.display = Etat.cueillettes.length ? 'flex' : 'none';
   }
   if (vue === 'stats') { rendreAlerteExport(); rendreStats(); }
@@ -1357,7 +1449,7 @@ function rendreSpots() {
 async function partagerSpot(id) {
   const s = Etat.spots.find(x => x.id === id); if (!s) return;
   const carte = (s.lat && s.lng) ? 'https://www.google.com/maps?q=' + encodeURIComponent(s.lat + ',' + s.lng) : '';
-  const texte = '🍄 ' + s.nom + ' — spot de cueillette de champignons' +
+  const texte = '🍄 ' + s.nom + ' — spot de cueillette' +
     (s.desc ? '\n' + s.desc : '') +
     (carte ? '\n📍 ' + s.lat + ', ' + s.lng : '') +
     (carte ? '\n🗺️ ' + carte : '');
@@ -1505,7 +1597,7 @@ function rendreGuide() {
     return okF && okS && okT;
   });
   if (!list.length) {
-    $('liste-guide').innerHTML = '<div class="vide-etat"><span class="ico">🔎</span>Aucun champignon trouvé.<br><button class="btn btn-gris btn-petit" style="margin-top:8px" onclick="reinitialiserFiltres()">↩️ Réinitialiser les filtres</button></div>';
+    $('liste-guide').innerHTML = '<div class="vide-etat"><span class="ico">🔎</span>Aucune espèce trouvée.<br><button class="btn btn-gris btn-petit" style="margin-top:8px" onclick="reinitialiserFiltres()">↩️ Réinitialiser les filtres</button></div>';
     return;
   }
   $('liste-guide').innerHTML = list.map(e => {
@@ -1558,7 +1650,7 @@ function ouvrirDetail(id, perso) {
   const nonComestible = statutAffiche !== 'comestible' && statutAffiche !== 'prudence';
   const galerie = illu.items.length ? (
     '<span class="guide-sujet">🖼️ Spécificités à repérer</span>' +
-    '<div style="display:flex;justify-content:space-between;align-items:center;margin:2px 0 10px"><span style="font-size:12.5px;opacity:.85">Vérifiez chaque critère sur le champignon</span><span class="spec-compteur" id="spec-compteur" aria-live="polite">' + nbFaits + '/' + illu.items.length + '</span></div>' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin:2px 0 10px"><span style="font-size:12.5px;opacity:.85">Vérifiez chaque critère sur l\'espèce</span><span class="spec-compteur" id="spec-compteur" aria-live="polite">' + nbFaits + '/' + illu.items.length + '</span></div>' +
     illu.items.map((it, i) =>
       '<div class="spec-carte' + (faits.faits[i] ? ' fait' : '') + (nonComestible ? ' dangereux' : '') + '" id="spec-carte-' + i + '" role="button" tabindex="0" aria-pressed="' + (faits.faits[i] ? 'true' : 'false') + '" onclick="basculerSpec(' + i + ')">' +
       (it.img ? '<div class="spec-photo"><img src="' + it.img + '" alt="' + esc(it.spec) + '" onclick="event.stopPropagation();ouvrirLightbox(this.src)"><span class="spec-num">' + (i + 1) + '</span><span class="spec-zoom" role="button" tabindex="0" data-src="' + esc(it.img) + '" onclick="event.stopPropagation();ouvrirLightbox(this.dataset.src)">🔍 Agrandir</span></div>' : '') +
@@ -1569,7 +1661,7 @@ function ouvrirDetail(id, perso) {
       ? '<div class="verdict-carte verdict-ok' + (nbFaits === illu.items.length ? ' ouv' : '') + '" id="spec-verdict-ok"><div class="t">✅ Tous les critères correspondent</div>' + esc(e.nom) + ' confirmé' + (statutAffiche === 'comestible' ? ' — récolte possible.' : ' — restez prudent (cuisson obligatoire).') + '</div>'
       : '<div class="verdict-carte verdict-danger' + (nbFaits === illu.items.length ? ' ouv' : '') + '" id="spec-verdict-ok"><div class="t">☠️ ' + nbFaits + '/' + illu.items.length + ' critères vérifiés</div>' + esc(e.nom) + ' est ' + (statutAffiche === 'mortel' ? 'MORTELLE' : 'non comestible') + ' — ne pas consommer.</div>') +
     (statutAffiche === 'comestible' || statutAffiche === 'prudence'
-      ? '<div class="verdict-carte verdict-att' + (nbFaits < illu.items.length ? ' ouv' : '') + '" id="spec-verdict-att"><div class="t">⚠️ ' + (nbFaits === 0 ? 'Rien n\'est encore vérifié' : 'Critères manquants') + '</div><span class="corps-att">' + (nbFaits === 0 ? 'Cochez chaque critère sur le champignon avant de consommer. En cas de doute : on ne mange pas.' : 'Ne consommez pas tant que tout n\'est pas vérifié. En cas de doute : on ne mange pas.') + '</span></div>'
+      ? '<div class="verdict-carte verdict-att' + (nbFaits < illu.items.length ? ' ouv' : '') + '" id="spec-verdict-att"><div class="t">⚠️ ' + (nbFaits === 0 ? 'Rien n\'est encore vérifié' : 'Critères manquants') + '</div><span class="corps-att">' + (nbFaits === 0 ? 'Cochez chaque critère sur l\'espèce avant de consommer. En cas de doute : on ne mange pas.' : 'Ne consommez pas tant que tout n\'est pas vérifié. En cas de doute : on ne mange pas.') + '</span></div>'
       : '<div class="verdict-carte verdict-danger-att' + (nbFaits < illu.items.length ? ' ouv' : '') + '" id="spec-verdict-att"><div class="t">☠️ ' + (nbFaits === 0 ? 'Rien n\'est encore vérifié' : 'Critères manquants') + '</div>' + (statutAffiche === 'mortel' ? 'Espèce MORTELLE — ne jamais consommer, même si tous les critères semblent correspondre.' : 'Espèce non comestible — ne pas consommer, même si tous les critères semblent correspondre.') + '</div>')
   ) : '';
   const boutons = '<button class="btn btn-jaune" onclick="ouvrirSheetIllu(\'' + e.id + '\')">🎨 Illustrations IA</button>' +
@@ -1632,7 +1724,7 @@ async function basculerSpec(i) {
   if (txtAtt) txtAtt.textContent = glypheAtt + ' ' + (nb === 0 ? 'Rien n\'est encore vérifié' : 'Critères manquants');
   // P3-3 (26e) : le corps suit aussi le compteur (plus de « Ne consommez pas… » à 0/5)
   const corpsAtt = att && att.querySelector('.corps-att');
-  if (corpsAtt) corpsAtt.textContent = nb === 0 ? 'Cochez chaque critère sur le champignon avant de consommer. En cas de doute : on ne mange pas.' : 'Ne consommez pas tant que tout n\'est pas vérifié. En cas de doute : on ne mange pas.';
+  if (corpsAtt) corpsAtt.textContent = nb === 0 ? 'Cochez chaque critère sur l\'espèce avant de consommer. En cas de doute : on ne mange pas.' : 'Ne consommez pas tant que tout n\'est pas vérifié. En cas de doute : on ne mange pas.';
   if (ok) ok.classList.toggle('ouv', nb === illu.items.length);
   if (att) att.classList.toggle('ouv', nb < illu.items.length);
 }
@@ -2742,7 +2834,7 @@ async function identifierPhotoIA(dataUrl, signal) {
 }
 
 /* ================= Stats ================= */
-const COULEURS_MOIS = ['#B45309', '#B45309', '#D9A441', '#6F8F3E', '#8A5A2B', '#B94527', '#B45309', '#B45309', '#D9A441', '#6F8F3E', '#8A5A2B', '#B94527'];
+const COULEURS_MOIS = ['#B45309', '#B45309', '#1E4D33', '#6F8F3E', '#8A5A2B', '#B94527', '#B45309', '#B45309', '#1E4D33', '#6F8F3E', '#8A5A2B', '#B94527'];
 function topRangs(entries, max, couleur) {
   if (!entries.length) return '<div class="vide-etat" style="padding:8px">Aucune donnée.</div>';
   return entries.map((e, i) =>
