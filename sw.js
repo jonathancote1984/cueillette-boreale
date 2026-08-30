@@ -1,7 +1,7 @@
 /* Service worker — cache-first PWA (édition Memphis).
    ⚠️ RÈGLE : à CHAQUE mise à jour de l'app, AUGMENTEZ le numéro de CACHE.
    Le bump IS le mécanisme de mise à jour pour les utilisateurs. */
-const CACHE = 'cqb-v9';
+const CACHE = 'cqb-v10';
 const FICHIERS = [
   './index.html',
   './manifest.json',
@@ -16,7 +16,30 @@ const FICHIERS = [
   './img/especes/the-labrador.jpg',
   './img/especes/poivre-des-dunes.jpg',
   './img/especes/myrique-baumier.jpg',
-  './img/especes/comptonie-voyageuse.jpg'
+  './img/especes/comptonie-voyageuse.jpg',
+  './img/specs/ail-des-bois-1.jpg',
+  './img/specs/ail-des-bois-3.jpg',
+  './img/specs/amelanchier-1.jpg',
+  './img/specs/amelanchier-2.jpg',
+  './img/specs/amelanchier-3.jpg',
+  './img/specs/comptonie-voyageuse-1.jpg',
+  './img/specs/comptonie-voyageuse-2.jpg',
+  './img/specs/comptonie-voyageuse-3.jpg',
+  './img/specs/myrique-baumier-1.jpg',
+  './img/specs/myrique-baumier-3.jpg',
+  './img/specs/myrique-baumier-5.jpg',
+  './img/specs/petit-the-1.jpg',
+  './img/specs/petit-the-2.jpg',
+  './img/specs/petit-the-3.jpg',
+  './img/specs/poivre-des-dunes-1.jpg',
+  './img/specs/poivre-des-dunes-3.jpg',
+  './img/specs/the-des-bois-1.jpg',
+  './img/specs/the-des-bois-3.jpg',
+  './img/specs/the-des-bois-5.jpg',
+  './img/specs/the-labrador-1.jpg',
+  './img/specs/the-labrador-3.jpg',
+  './img/specs/the-labrador-5.jpg',
+  './img/specs/credits.json'
 ];
 
 self.addEventListener('install', e => {

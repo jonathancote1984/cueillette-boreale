@@ -2225,7 +2225,224 @@ let illuEspeceId = null;
 // Pré-remplissage : 5 spécificités standard d'identification par espèce (générées par IA en 1 clic)
 // Chaque entrée : { spec: libellé court, desc: ce qu'il faut VÉRIFIER sur la plante, img: photo réelle (optionnel) }
 /* SPECS_DEFAUT (checklists photo): retiré de ce fork — cf. specsDefautPour ci-dessous */
-const SPECS_DEFAUT = {};
+const SPECS_DEFAUT = {
+ "ail-des-bois": [
+  {
+   "spec": "Feuilles",
+   "desc": "2-3 grandes feuilles larges (5-8 cm), ovales-lancéolées, vert vif et lustré, légèrement pliées le long de la nervure; elles fanent en juin, avant la floraison.",
+   "img": "img/specs/ail-des-bois-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Pas de tige feuillée : une hampe florale nue de 15-40 cm porte l'ombelle; chaque hiver les feuilles émergent directement du bulbe souterrain.",
+   "img": null
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Ombelle sphérique de 20-50 petites fleurs blanc-crème étoilées, portée par une hampe nue; fleurit juin-juillet, souvent quand les feuilles ont disparu.",
+   "img": "img/specs/ail-des-bois-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur d'ail PUISSANTE et âcre dès qu'on froisse la feuille — c'est le test décisif contre le muguet; saveur d'ail doux et profond.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Sous-bois d'érablière riche et humide, fonds de vallée, colonies denses sur sol noir; espèce vulnérable au Québec, récolte raisonnable.",
+   "img": null
+  }
+ ],
+ "amelanchier": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles ovales presque rondes (3-6 cm), vert vif au-dessus, finement dentées sur la moitié supérieure, à pointe courte; disposées en alternance.",
+   "img": "img/specs/amelanchier-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Port en troncs multiples dressés; écorce grise lisse et souvent teintée de rouge, finement striée; rameaux de l'année brun-rouge.",
+   "img": "img/specs/amelanchier-2.jpg"
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Fleurs blanches à 5 pétales en grappes dressées, avant les feuilles (mai-juin); baie violette-noir sucrée de 8-12 mm à couronne (calice) en étoile au sommet, en grappe de 5-10.",
+   "img": "img/specs/amelanchier-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Baie juteuse au goût de pomme-bleuet, douce et sucrée (les « petites poires »); fleurs discrètement parfumées.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Lisières, bosquets, berges, pentes rocheuses et talus; arbuste pionnier des milieux ouverts, du sud jusqu'au boréal.",
+   "img": null
+  }
+ ],
+ "the-des-bois": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles ovales-coriaces, lustrées, vert foncé, persistantes (3-6 cm), à bords finement denticulés; dégagent au froissement l'odeur de wintergreen.",
+   "img": "img/specs/the-des-bois-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Tige souterraine rampante; rameaux aériens dressés de 5-15 cm portant une couronne de feuilles au sommet.",
+   "img": null
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Petites fleurs blanches en grelot retombant (juin-août) sous les feuilles; baie rouge vif de 8-12 mm, aromatique, qui passe l'hiver sur la plante.",
+   "img": "img/specs/the-des-bois-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur fraîche et sucrée de wintergreen (pincette) dès qu'on froisse feuille ou baie; goût de menthe fraîche, base de tisane.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Sous-bois de conifères et clairières sur sol acide, sableux ou humifère; tapis courant des forêts boréales.",
+   "img": "img/specs/the-des-bois-5.jpg"
+  }
+ ],
+ "petit-the": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles minuscules (3-8 mm), ovales, vert foncé lustré, persistantes, alternées le long des tiges rampantes.",
+   "img": "img/specs/petit-the-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Tiges filiformes rampantes sur la mousse et le bois mort, à poils roux raides (hispidula = finement hérissé); tapis bas de 1-5 cm.",
+   "img": "img/specs/petit-the-2.jpg"
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Petite baie blanche OVOIDE 5-8 mm, finement hérissée/velue, à la tige rampante sur la mousse. Goût de wintergreen au froissement.",
+   "img": "img/specs/petit-the-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur délicate de wintergreen au froissement; tisane douce et aromatique, traditionnelle contre rhumes et maux de gorge.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Sur et autour des souches, troncs décomposés et hummocks de sphaigne des forêts et tourbières boréales humides.",
+   "img": null
+  }
+ ],
+ "the-labrador": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles étroites et allongées (2-5 cm), coriaces, à bords légèrement recourbés; vert mat dessus, ROUX FELETÉ (pilosité dense) dessous.",
+   "img": "img/specs/the-labrador-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Arbrisseau de 40-80 cm à rameaux dressés, d'abord couverts d'un duvet roux puis bruns.",
+   "img": null
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Fleurs blanches à 5 pétales en ombelle dense au sommet des rameaux (mai-juillet), très mellifères.",
+   "img": "img/specs/the-labrador-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur épicée-résineuse puissante au froissement; décoction = thé boréal traditionnel (riche en vitamine C) — prudence: ledol, 1-2 tasses/jour max.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Tourbières, marécages, muskeg et bordures de lacs sur sol tourbeux acide; le thé des milieux humides boréaux.",
+   "img": "img/specs/the-labrador-5.jpg"
+  }
+ ],
+ "poivre-des-dunes": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles ovales (3-8 cm), vert vif, à bord doublement denté et légèrement crispé/gaufré, lustrées.",
+   "img": "img/specs/poivre-des-dunes-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Arbuste de 1-3 m aux rameaux gris-brun, poussant souvent en fourrés denses sur sol pauvre.",
+   "img": null
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Chatons mâles pendants gris-violacé puis roux (3-8 cm) avant/après les feuilles; chatons femelles en petits cônes ligneux dressés qui persistent l'hiver.",
+   "img": "img/specs/poivre-des-dunes-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Chatons froissés : odeur résineuse légèrement citronnée; saveur poivrée-résineuse, la « câpre » boréale moulue en condiment — prudence: abortif traditionnel.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Sols pauvres sableux ou rocheux, berges, rivages, coupes et pentes du boréal québécois.",
+   "img": null
+  }
+ ],
+ "myrique-baumier": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles étroites (2-5 cm), vert bleuté, finement dentées vers le sommet, parsemées de POINTS RÉSINEUX jaunes sur le dessous.",
+   "img": "img/specs/myrique-baumier-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Arbrisseau de 1-2 m à rameaux gris-brun peu ramifiés, à bourgeons écailleux.",
+   "img": null
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Chatons mâles écailleux brun-rouge en groupes denses avant les feuilles (avril-mai); chatons femelles plus petits et axillaires.",
+   "img": "img/specs/myrique-baumier-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur balsamique PUISSANTE, la plante se sent de loin; feuilles et chatons en tisane, épice sauvage et répulsif à moustiques — prudence: plante forte.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Tourbières, marécages, bords de lacs et de rivières; milieux très humides, en touffes denses.",
+   "img": "img/specs/myrique-baumier-5.jpg"
+  }
+ ],
+ "comptonie-voyageuse": [
+  {
+   "spec": "Feuilles",
+   "desc": "Feuilles de 7-15 cm très découpées en lanières étroites et lobées, évoquant des frondes de fougère.",
+   "img": "img/specs/comptonie-voyageuse-1.jpg"
+  },
+  {
+   "spec": "Tige",
+   "desc": "Tiges brun rougeâtre et finement pubescentes d'un arbrisseau de 0,5-1,5 m; poils visibles à la loupe.",
+   "img": "img/specs/comptonie-voyageuse-2.jpg"
+  },
+  {
+   "spec": "Fleur et fruit",
+   "desc": "Chatons cylindriques brun roux à l'extrémité des rameaux avant les feuilles (avril-mai); fruits en petits akènes.",
+   "img": "img/specs/comptonie-voyageuse-3.jpg"
+  },
+  {
+   "spec": "Odeur et saveur",
+   "desc": "Odeur balsamique de sapin baumier au froissement, plus intense en été chaud; tisane et épice des marinades, fumigation traditionnelle.",
+   "img": null
+  },
+  {
+   "spec": "Habitat",
+   "desc": "Terrains sablonneux secs, brûlis, coupes et bords de chemins sableux; colonies denses par rhizomes.",
+   "img": null
+  }
+ ]
+};
 function specsDefautPour(id) {
   const defauts = SPECS_DEFAUT[id] || [
     { spec: 'Feuilles', desc: 'Forme, marge, disposition, odeur au froissement.' },
