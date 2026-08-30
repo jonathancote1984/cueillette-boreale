@@ -1,0 +1,74 @@
+[
+ {
+  "fichier": "img/especes/ail-des-bois.jpg",
+  "espece": "Ail des bois",
+  "auteur": "The Cosmonaut",
+  "licence": "CC BY-SA 2.5 ca",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.5/ca/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Allium_tricoccum_-_Stouffville.jpg",
+  "source": "File:Allium tricoccum - Stouffville.jpg"
+ },
+ {
+  "fichier": "img/especes/amelanchier.jpg",
+  "espece": "Amélanchier",
+  "auteur": "Chris Light",
+  "licence": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Serviceberry_(Amelanchier_alnifolia)_4776.jpg",
+  "source": "File:Serviceberry (Amelanchier alnifolia) 4776.jpg"
+ },
+ {
+  "fichier": "img/especes/the-des-bois.jpg",
+  "espece": "Thé des bois",
+  "auteur": "Krzysztof Ziarnek, Kenraiz",
+  "licence": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gaultheria_procumbens_kz03.jpg",
+  "source": "File:Gaultheria procumbens kz03.jpg"
+ },
+ {
+  "fichier": "img/especes/petit-the.jpg",
+  "espece": "Petit thé",
+  "auteur": "Paul Prior",
+  "licence": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gaultheria_hispidula_152948257.jpg",
+  "source": "File:Gaultheria hispidula 152948257.jpg"
+ },
+ {
+  "fichier": "img/especes/the-labrador.jpg",
+  "espece": "Thé du Labrador",
+  "auteur": "Nichole Ouellette",
+  "licence": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ledum_groenlandicum_019.jpg",
+  "source": "File:Ledum groenlandicum 019.jpg"
+ },
+ {
+  "fichier": "img/especes/poivre-des-dunes.jpg",
+  "espece": "Poivre des dunes (aulne crispé)",
+  "auteur": "Mason Brock (Masebrock)",
+  "licence": "Public domain",
+  "license_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Alnus_crispa.jpg",
+  "source": "File:Alnus crispa.jpg"
+ },
+ {
+  "fichier": "img/especes/myrique-baumier.jpg",
+  "espece": "Myrique baumier",
+  "auteur": "Krzysztof Ziarnek, Kenraiz",
+  "licence": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Myrica_gale_kz1.jpg",
+  "source": "File:Myrica gale kz1.jpg"
+ },
+ {
+  "fichier": "img/especes/comptonie-voyageuse.jpg",
+  "espece": "Comptonie voyageuse",
+  "auteur": "Rob Routledge, Sault College, Bugwood.org",
+  "licence": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Comptonia_peregrina_5487709.jpg",
+  "source": "File:Comptonia peregrina 5487709.jpg"
+ }
+]

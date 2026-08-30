@@ -1,19 +1,29 @@
 /* Service worker — cache-first PWA (édition Memphis).
    ⚠️ RÈGLE : à CHAQUE mise à jour de l'app, AUGMENTEZ le numéro de CACHE.
    Le bump IS le mécanisme de mise à jour pour les utilisateurs. */
-const CACHE = 'cqb-v7';
+const CACHE = 'cqb-v9';
 const FICHIERS = [
   './index.html',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
-  './fonts/fredoka.woff2'
+  './fonts/fredoka.woff2',
+  './img/especes/ail-des-bois.jpg',
+  './img/especes/amelanchier.jpg',
+  './img/especes/the-des-bois.jpg',
+  './img/especes/petit-the.jpg',
+  './img/especes/the-labrador.jpg',
+  './img/especes/poivre-des-dunes.jpg',
+  './img/especes/myrique-baumier.jpg',
+  './img/especes/comptonie-voyageuse.jpg'
 ];
 
 self.addEventListener('install', e => {
   // AUDIT M8 (2026-08) : une ressource manquante ne doit plus tuer l'installation —
   // socle critique en addAll, images en add() individuel tolérant
+  const SOCLE = FICHIERS.filter(f => !f.startsWith('./img/specs/') && !f.startsWith('./img/especes/'));
+  const IMAGES = FICHIERS.filter(f => f.startsWith('./img/specs/') || f.startsWith('./img/especes/'));
   e.waitUntil(caches.open(CACHE).then(c =>
     c.addAll(SOCLE).catch(() => {}).then(() =>
       Promise.allSettled(IMAGES.map(f => c.add(f)))
