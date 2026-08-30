@@ -1,15 +1,15 @@
 {
   "name": "Cueillette Boréale — Carnet de cueillette",
   "short_name": "Cueillette",
-  "description": "Spots, identification et journal de cueillette de plantes et baies boréales du Québec — édition Memphis, 100 % hors-ligne.",
+  "description": "Spots, identification et journal de cueillette de plantes et baies boréales du Québec — 100 % hors-ligne.",
   "lang": "fr",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "theme_color": "#D9A441",
-  "background_color": "#F3E8D5",
+  "theme_color": "#1E4D33",
+  "background_color": "#EFF3EC",
   "icons": [
     {
       "src": "icons/icon-192.png",

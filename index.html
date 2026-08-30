@@ -25,6 +25,10 @@
   --rouge:#A32633; --gris:#83987F;
   --ambre:#1E4D33; --olive:#5E8C4A; --cuir:#3A5C42;
   --rouille:#4C7A55; --terracotta:#B5651D;
+  /* couleurs de DANGER (distinctes du vert = comestible) : sécurité alimentaire */
+  --prudence:#B5651D; --toxique:#B45309; --immangeable:#6E6658;
+  /* neutre pour état vide graphique (gris clair de la palette) */
+  --vide:#CBD7C9;
 }
 *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
 html,body{margin:0;padding:0;}
@@ -40,7 +44,7 @@ body{
 /* ===== Header Memphis ===== */
 header{
   position:sticky; top:0; z-index:50;
-  background:linear-gradient(135deg,#1E4D33,#1E4D33);
+  background:linear-gradient(135deg,var(--ambre),var(--ambre));
   border-bottom:3px solid var(--noir);
   padding:12px 14px 0;
   overflow:hidden;
@@ -94,11 +98,11 @@ nav.tabs button.actif::before{
   width:44px; height:6px; border:3px solid var(--noir); border-bottom:0; border-radius:8px 8px 0 0;
   background:var(--ambre);
 }
-nav.tabs button:nth-child(1).actif{color:#1E4D33;}
-nav.tabs button:nth-child(2).actif{color:#5E8C4A;}
-nav.tabs button:nth-child(3).actif{color:#3A5C42;}
-nav.tabs button:nth-child(4).actif{color:#B5651D;}
-nav.tabs button:nth-child(5).actif{color:#4C7A55;}
+nav.tabs button:nth-child(1).actif{color:var(--ambre);}
+nav.tabs button:nth-child(2).actif{color:var(--olive);}
+nav.tabs button:nth-child(3).actif{color:var(--cuir);}
+nav.tabs button:nth-child(4).actif{color:var(--terracotta);}
+nav.tabs button:nth-child(5).actif{color:var(--rouille);}
 .fab{
   position:fixed; right:18px; bottom:calc(84px + env(safe-area-inset-bottom)); z-index:55;
   width:60px; height:60px; border-radius:999px;
@@ -202,9 +206,9 @@ h2.titre-vue .ico{font-size:20px;}
   border:2.5px solid var(--noir); white-space:nowrap; transform:rotate(-1.5deg);
 }
 .st-comestible{background:var(--olive); color:var(--blanc);}
-.st-prudence{background:var(--ambre); color:var(--blanc);}
-.st-immangeable{background:var(--gris); color:var(--blanc);}
-.st-toxique{background:var(--rouille); color:var(--blanc);}
+.st-prudence{background:var(--prudence); color:var(--blanc);}
+.st-immangeable{background:var(--immangeable); color:var(--blanc);}
+.st-toxique{background:var(--toxique); color:var(--blanc);}
 .st-mortel{background:var(--rouge); color:var(--blanc);}
 .st-inconnu{background:var(--gris);}
 /* ===== Alertes ===== */
@@ -213,16 +217,16 @@ h2.titre-vue .ico{font-size:20px;}
   padding:12px 14px; font-size:14px; line-height:1.5; font-weight:500;
   box-shadow:4px 4px 0 var(--noir); margin-bottom:16px; position:relative; overflow:hidden;
 }
-.alerte-rouge{background:#F6DFD2;}
+.alerte-rouge{background:#EAC7CF;}
 .alerte-rouge::after{
   content:''; position:absolute; right:-14px; top:-14px; width:52px; height:52px;
   background:repeating-linear-gradient(45deg, var(--rouge) 0 6px, transparent 6px 12px);
   border:3px solid var(--noir); border-radius:50%;
 }
-.alerte-orange{background:#F4E3C3;}
+.alerte-orange{background:#EFE0C9;}
 .alerte-orange::after{
   content:''; position:absolute; right:-10px; bottom:-10px; width:34px; height:34px;
-  background:var(--rouille); border:3px solid var(--noir); transform:rotate(14deg);
+  background:var(--prudence); border:3px solid var(--noir); transform:rotate(14deg);
 }
 /* Encart d'aide (neutre, sans le losange « Prudence » réservé aux alertes) */
 .encart-aide{
@@ -2738,7 +2742,7 @@ const prompt = 'Tu es un botaniste expert des plantes sauvages du Québec. Ident
 }
 
 /* ================= Stats ================= */
-const COULEURS_MOIS = ['#3A5C42', '#4C7A55', '#1E4D33', '#5E8C4A', '#B5651D', '#8A6A4A', '#4C7A55', '#3A5C42', '#1E4D33', '#5E8C4A', '#B5651D', '#8A6A4A'];
+const COULEURS_MOIS = ['#3A5C42', '#4C7A55', '#1E4D33', '#5E8C4A', '#B5651D', '#6E6658', '#4C7A55', '#3A5C42', '#1E4D33', '#5E8C4A', '#B5651D', '#6E6658'];
 function topRangs(entries, max, couleur) {
   if (!entries.length) return '<div class="vide-etat" style="padding:8px">Aucune donnée.</div>';
   return entries.map((e, i) =>
@@ -2774,7 +2778,7 @@ function rendreStats() {
   const maxM = Math.max(...mois, 1);
   $('st-mois').innerHTML = '<div class="mois-grille">' +
     ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'].map((lab, i) =>
-      '<div class="mois-col"><div class="tige" role="img" aria-label="' + lab + ' : ' + esc(fmtKg(mois[i])) + '" style="height:' + (mois[i] > 0 ? Math.min(100, Math.max(2, mois[i] / maxM * 100)) : 4) + '%;background:' + (mois[i] > 0 ? COULEURS_MOIS[i] : '#D8D3C4') + '"></div><span class="lab">' + lab + '</span></div>'
+      '<div class="mois-col"><div class="tige" role="img" aria-label="' + lab + ' : ' + esc(fmtKg(mois[i])) + '" style="height:' + (mois[i] > 0 ? Math.min(100, Math.max(2, mois[i] / maxM * 100)) : 4) + '%;background:' + (mois[i] > 0 ? COULEURS_MOIS[i] : 'var(--vide)') + '"></div><span class="lab">' + lab + '</span></div>'
     ).join('') + '</div>';
 }
 

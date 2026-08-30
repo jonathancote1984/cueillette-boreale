@@ -1,7 +1,7 @@
-/* Service worker — cache-first PWA (édition Memphis).
+/* Service worker — cache-first PWA (Cueillette Boréale).
    ⚠️ RÈGLE : à CHAQUE mise à jour de l'app, AUGMENTEZ le numéro de CACHE.
    Le bump IS le mécanisme de mise à jour pour les utilisateurs. */
-const CACHE = 'cqb-v10';
+const CACHE = 'cqb-v12';
 const FICHIERS = [
   './index.html',
   './manifest.json',
@@ -48,7 +48,7 @@ self.addEventListener('install', e => {
   const SOCLE = FICHIERS.filter(f => !f.startsWith('./img/specs/') && !f.startsWith('./img/especes/'));
   const IMAGES = FICHIERS.filter(f => f.startsWith('./img/specs/') || f.startsWith('./img/especes/'));
   e.waitUntil(caches.open(CACHE).then(c =>
-    c.addAll(SOCLE).catch(() => {}).then(() =>
+    Promise.allSettled(SOCLE.map(f => c.add(f))).then(() =>
       Promise.allSettled(IMAGES.map(f => c.add(f)))
     )
   ).then(() => self.skipWaiting()));
@@ -67,7 +67,7 @@ self.addEventListener('fetch', e => {
   // API et requêtes avec clé : jamais de cache (résultats frais, clé jamais stockée)
   // Wiki docsify (/docs/) et guide (/guide/) : jamais mis en cache ni interceptés — toujours à jour
   if (url.origin === self.location.origin && (url.pathname.includes('/docs/') || url.pathname.includes('/guide/'))) return;
-  if (url.hostname.endsWith('wikimedia.org') || url.hostname.endsWith('googleapis.com') || url.hostname.endsWith('mycoquebec.org') || url.search.includes('key=')) return;
+  if (url.hostname.endsWith('wikimedia.org') || url.hostname.endsWith('googleapis.com') || url.search.includes('key=')) return;
   e.respondWith(
     caches.match(e.request).then(reponse => reponse || fetch(e.request).then(r => {
       // AUDIT M13 : ne jamais empoisonner le cache avec une réponse d'erreur
