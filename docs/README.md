@@ -8,7 +8,7 @@ relatifs qui fonctionnent aussi bien sur GitHub que dans un éditeur local.
 
 Cueillette Boréale est un **fork boréal** de l'app de cueillette champignons « Memphis » :
 l'app est réorientée vers les **8 plantes et baies boréales du Québec, toutes comestibles
-(dont 3 avec prudence)**. Les champignons sont **retirés du fork** : aucune fiche de
+(dont 4 avec prudence)**. Les champignons sont **retirés du fork** : aucune fiche de
 champignon n'y subsiste. La source de vérité du contenu est
 [especes-boreales.md](especes-boreales.md) et son jumeau `especes-boreales.json`.
 

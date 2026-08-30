@@ -47,9 +47,9 @@ source de vérité technique. Répartition :
 | Statut | Espèces |
 |---|---|
 | ✅ Comestibles | 8 — ail des bois, amélanchier, thé des bois, petit thé, thé du Labrador, poivre des dunes, myrique baumier, comptonie voyageuse |
-| ⚠️ Avec prudence | 3 — ail des bois (espèce vulnérable, test de l'odeur d'ail), thé du Labrador (ledol — modération), poivre des dunes (modération, abortif traditionnel) |
+| ⚠️ Avec prudence | 4 — ail des bois (espèce vulnérable, test de l'odeur d'ail), thé du Labrador (ledol — modération), poivre des dunes (modération, abortif traditionnel), myrique baumier (puissant — modération) |
 
-Total : **8 plantes et baies boréales, toutes comestibles (dont 3 à prudence)** — aucune
+Total : **8 plantes et baies boréales, toutes comestibles (dont 4 à prudence)** — aucune
 espèce toxique ni mortelle au guide.
 
 ## Confusions à connaître au Québec

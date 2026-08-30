@@ -116,7 +116,7 @@ Détails techniques : [Données et confidentialité](donnees-confidentialite.md)
 ## Limites assumées de l'app
 
 - L'app ne sent pas, ne goûte pas, ne déterre pas de racine, ne fait pas de test chimique.
-- Le guide couvre **8 plantes et baies boréales, toutes comestibles (dont 3 à prudence)** :
+- Le guide couvre **8 plantes et baies boréales, toutes comestibles (dont 4 à prudence)** :
   la flore boréale du Québec en compte des centaines.
 - L'aspect d'une plante varie selon l'âge, la saison, le sol et la lumière.
 - L'IA peut se tromper avec assurance : la confiance affichée est une estimation du modèle,

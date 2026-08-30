@@ -1,6 +1,6 @@
 # Espèces boréales — contenu de l'application
 
-**8 espèces** — toutes comestibles (dont 3 avec prudence d'usage).
+**8 espèces** — toutes comestibles (dont 4 avec prudence d'usage).
 Le guide est volontairement concentré sur les **plantes aromatiques et baies boréales** du Québec.
 
 Source de vérité technique : `docs/especes-boreales.json` (mêmes fiches que dans `index.html`).

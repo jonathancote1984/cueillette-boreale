@@ -1,48 +1,65 @@
 #!/usr/bin/env python3
-"""Icônes PWA style Memphis : fond jaune vif avec pois colorés, champignon géométrique
-rouge à pois crème, contours noirs épais. Usage : python generer_icones.py"""
+"""Icônes PWA Cueillette Boréale : 3 bleuets sur fond ivoire, contours noirs épais,
+petites pointes rayonnantes et une feuille verte. Usage : python generer_icones.py"""
 import os
 from PIL import Image, ImageDraw
 
-JAUNE = (217, 164, 65)    # ambre
-ROUGE = (179, 38, 30)     # rouille
-BLEU = (138, 90, 43)      # brun cuir
-ROSE = (193, 80, 46)      # terracotta
-VERT = (111, 143, 62)     # olive
-CREME = (253, 246, 231)   # crème chaud
-NOIR = (36, 26, 15)       # brun-noir
+# Palette boréale (vert sapin)
+IVOIRE = (239, 243, 236)      # #EFF3EC fond
+BLEUET = (61, 90, 158)        # bleu des bleuets
+BLEUET_CLAIR = (94, 120, 190) # reflet
+VERT = (30, 77, 51)           # #1E4D33 feuille / contour
+BLANC = (248, 251, 246)       # #F8FBF6
+NOIR = (15, 36, 24)           # #0F2418 contour épais
 
 def fond(d, taille):
-    d.rectangle([0, 0, taille, taille], fill=JAUNE)
-    # pois décoratifs Memphis (disposés en quinconce)
-    pois = [(0.10, 0.12, BLEU), (0.88, 0.14, ROSE), (0.15, 0.86, VERT), (0.86, 0.84, BLEU),
-            (0.50, 0.03, ROSE), (0.05, 0.48, ROUGE), (0.95, 0.50, VERT), (0.50, 0.97, BLEU)]
-    for px, py, couleur in pois:
-        r = taille * 0.045
-        d.ellipse([px * taille - r, py * taille - r, px * taille + r, py * taille + r],
-                  fill=couleur, outline=NOIR, width=max(2, int(taille * 0.012)))
+    d.rectangle([0, 0, taille, taille], fill=IVOIRE)
 
-def champignon(d, cx, cy, e):
-    """Champignon géométrique Memphis centré en (cx, cy), taille relative e."""
+def feuille(d, cx, cy, e, angle_deg):
+    """Petite feuille ovale orientée."""
+    import math
+    img = Image.new('RGBA', (int(e*1.2), int(e*0.7)), (0, 0, 0, 0))
+    dd = ImageDraw.Draw(img)
+    dd.ellipse([0, 0, img.width - 1, img.height - 1], fill=VERT, outline=NOIR, width=max(2, int(e*0.09)))
+    img = img.rotate(angle_deg, expand=True)
+    d._image.alpha_composite(img, (int(cx - img.width/2), int(cy - img.height/2)))
+
+def bleuet(d, cx, cy, e):
+    """Baie de bleuet : cercle bleu + pointes rayonnantes + couronne + reflet blanc."""
     lw = max(3, int(e * 0.09))
-    # Pied
-    d.rounded_rectangle([cx - 0.30 * e, cy - 0.05 * e, cx + 0.30 * e, cy + 1.05 * e],
-                        radius=0.14 * e, fill=CREME, outline=NOIR, width=lw)
-    # Chapeau (demi-cercle)
-    d.pieslice([cx - 1.25 * e, cy - 1.10 * e, cx + 1.25 * e, cy + 0.60 * e],
-               180, 360, fill=ROUGE, outline=NOIR, width=lw)
-    # Pois crème
-    for px, py, pr in [(-0.50, -0.55, 0.14), (0.05, -0.72, 0.16), (0.58, -0.42, 0.12),
-                       (-0.10, -0.25, 0.11), (0.40, -0.02, 0.10), (-0.60, -0.16, 0.09)]:
-        d.ellipse([cx + (px - pr) * e, cy + (py - pr) * e, cx + (px + pr) * e, cy + (py + pr) * e],
-                  fill=CREME)
+    # corps
+    d.ellipse([cx - e*0.5, cy - e*0.5, cx + e*0.5, cy + e*0.5], fill=BLEUET, outline=NOIR, width=lw)
+    # pointes rayonnantes (le calice)
+    for a in range(-40, 250, 25):
+        import math
+        rad = math.radians(a)
+        x1 = cx + e*0.46*math.cos(rad); y1 = cy - e*0.46*math.sin(rad)
+        x2 = cx + e*0.68*math.cos(rad); y2 = cy - e*0.68*math.sin(rad)
+        d.line([x1, y1, x2, y2], fill=NOIR, width=max(1, int(e*0.05)))
+    # couronne centrale
+    cw = int(e*0.09)
+    for a in range(-40, 250, 25):
+        import math
+        rad = math.radians(a)
+        x1 = cx + e*0.14*math.cos(rad); y1 = cy - e*0.14*math.sin(rad)
+        x2 = cx + e*0.30*math.cos(rad); y2 = cy - e*0.30*math.sin(rad)
+        d.line([x1, y1, x2, y2], fill=NOIR, width=cw)
+    # reflet blanc
+    d.ellipse([cx - e*0.30, cy - e*0.24, cx - e*0.08, cy - e*0.05], fill=BLANC)
 
 def generer(taille, nom, masquable=False):
     img = Image.new('RGBA', (taille, taille))
     d = ImageDraw.Draw(img)
+    # attacher une image composite pour alpha_composite de feuille()
+    d._image = img
     fond(d, taille)
-    e = taille * (0.40 if masquable else 0.30)
-    champignon(d, taille / 2, taille / 2, e)
+    s = (0.34 if masquable else 0.46)   # taille des bleuets en fraction (masquable = plus petit pour marges)
+    # Disposition 3 bleuets (2 dessus, 1 dessous-centre)
+    bleuet(d, taille*0.36, taille*0.44, taille*s)
+    bleuet(d, taille*0.64, taille*0.42, taille*s)
+    bleuet(d, taille*0.50, taille*0.62, taille*s)
+    # feuille verte en haut à droite
+    feuille(d, taille*0.82, taille*0.20, taille*0.13, angle_deg=35)
     img.save(os.path.join('icons', nom))
     print('OK', nom, taille)
 

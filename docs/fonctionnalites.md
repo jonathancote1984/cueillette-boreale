@@ -53,8 +53,8 @@ terrain et des fonctions d'IA facultatives.
 - Chaque espèce affiche une pastille de statut : comestible, prudence, toxique,
   **MORTEL**, ou inconnu.
 
-Répartition du guide : 8 plantes et baies boréales, toutes comestibles (dont 3 à prudence —
-ail des bois, thé du Labrador, poivre des dunes). Aucune espèce toxique ni mortelle au guide.
+Répartition du guide : 8 plantes et baies boréales, toutes comestibles (dont 4 à prudence —
+ail des bois, thé du Labrador, poivre des dunes et myrique baumier). Aucune espèce toxique ni mortelle au guide.
 Liste complète dans [Espèces boréales](especes-boreales.md) et
 [Guide d'identification](guide-identification.md).
 

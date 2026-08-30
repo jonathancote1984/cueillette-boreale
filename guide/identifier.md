@@ -11,7 +11,7 @@ une **checklist terrain** pour vérifier chaque critère devant la plante réell
 
 Le guide compte **8 plantes et baies boréales, toutes comestibles** (ail des bois,
 amélanchier, thé des bois, petit thé, thé du Labrador, poivre des dunes, myrique baumier,
-comptonie voyageuse), dont 3 à prudence — ail des bois, thé du Labrador et poivre des dunes.
+comptonie voyageuse), dont 4 à prudence — ail des bois, thé du Labrador, poivre des dunes et myrique baumier.
 Aucune espèce toxique ni mortelle au guide.
 
 ## La checklist terrain (5 critères)
