@@ -1,7 +1,7 @@
 /* Service worker — cache-first PWA (Cueillette Boréale).
    ⚠️ RÈGLE : à CHAQUE mise à jour de l'app, AUGMENTEZ le numéro de CACHE.
    Le bump IS le mécanisme de mise à jour pour les utilisateurs. */
-const CACHE = 'cqb-v12';
+const CACHE = 'cqb-v13';
 const FICHIERS = [
   './index.html',
   './manifest.json',
