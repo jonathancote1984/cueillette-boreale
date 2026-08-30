@@ -1,94 +1,22 @@
 [
  {
-  "id": "bleuet",
+  "id": "ail-des-bois",
   "img": null,
-  "nom": "Bleuet nain",
-  "latin": "Vaccinium angustifolium",
+  "nom": "Ail des bois (ail rampant)",
+  "latin": "Allium tricoccum",
   "statut": "comestible",
-  "prudence": false,
-  "saison": "Juillet à août",
-  "habitat": "Tourbières, coteaux rocheux, coupes forestières, landes à bleuets (Saguenay–Lac-Saint-Jean, Côte-Nord).",
-  "desc": "Petit arbuste 20-50 cm à feuilles ovales dentées. Fleurs blanches en clochettes, baies bleu-noir à « couronne » (calice) au sommet, pruine bleuâtre. Le fruit emblématique du boréal, excellent cru, congelé ou en confiture.",
+  "prudence": true,
+  "saison": "Avril à juin (feuilles) · août-septembre (bulbe, récolte encadrée)",
+  "habitat": "Érablières riches et humides, fonds de vallée, sous-bois frais du sud du Québec. Souvent en colonies denses sur sol noir riche.",
+  "desc": "L'oignon sauvage le plus convoité du Québec. 2-3 feuilles larges (5-8 cm), vert franc et lustré, fanant avant la floraison estivale. Toute la plante dégage une odeur d'ail puissante au froissement — c'est le test décisif. Bulbe allongé blanc, saveur d'ail doux et profond. Espèce VULNÉRABLE au Québec : récolte raisonnable (feuilles surtout, quelques bulbes par colonie), jamais la totalité d'un site.",
   "carac": [
-   "Arbrisseau bas 20-50 cm, tiges anguleuses vertes",
-   "Feuilles ovales finement dentées, vert lustré",
-   "Baies bleu-noir avec couronne (calice) au sommet",
-   "Chair pourpre, graines minuscules",
-   "Fleurs en clochettes blanches/rosées au printemps"
+   "2-3 feuilles larges (5-8 cm), ovales-lancéolées, vert franc lustré",
+   "Odeur d'ail PUISSANTE dès qu'on froisse la feuille (test décisif)",
+   "Bulbe allongé blanc avec racines fines à la base",
+   "Fleur blanche en ombelle sur hampe nue (juin-juillet)",
+   "Sous-bois d'érablière riche, souvent en colonie"
   ],
-  "confusions": "Aucune confusion mortelle au Québec. La morelle noire (toxique) a des baies noires luisantes SANS couronne, feuilles en forme de lance non dentées et fleurs blanches en étoile retombante — pousse en friches, pas en landes."
- },
- {
-  "id": "camarine",
-  "img": null,
-  "nom": "Camarine noire",
-  "latin": "Empetrum nigrum",
-  "statut": "comestible",
-  "prudence": false,
-  "saison": "Août à septembre",
-  "habitat": "Toundra, tourbières, dunes et landes sableuses (Basse-Côte-Nord, Anticosti).",
-  "desc": "Sous-arbrisseau rampant touffu semblable à un petit conifère. Baies noires luisantes de 6-8 mm au jus violet, goût doux et aqueux. Traditionnelle chez les Innu et les Côtiers.",
-  "carac": [
-   "Tiges tapissantes à feuilles en aiguilles, comme un mini-sapin",
-   "Baies noires luisantes, 5-8 mm, à 6 graines",
-   "Fleurs minuscules roses, solitaires",
-   "Coussins denses sur sol acide sablonneux"
-  ],
-  "confusions": "Aucune confusion dangereuse connue; ne pas confondre avec le raisin d'ours (Arctostaphylos uva-ursi, non toxique mais fade et astringent, feuilles coriaces persistantes plus grandes)."
- },
- {
-  "id": "chicoute",
-  "img": null,
-  "nom": "Chicouté (plaquebière)",
-  "latin": "Rubus chamaemorus",
-  "statut": "comestible",
-  "prudence": false,
-  "saison": "Mi-juillet à août",
-  "habitat": "Tourbières, marais sphaigne, toundra arbustive (Côte-Nord, Ungava, Gaspésie).",
-  "desc": "Baie ambrée à or avec arôme de miel et d'abricot, unique sur plante femelle à feuille palmée lobée. Fruit roi du Nord, très périssable. Appelée cloudberry en anglais, plaquebière au Saguenay.",
-  "carac": [
-   "Feuille unique palmée à 5 lobes, ridée",
-   "Fleur blanche solitaire (plante mâle/femelle séparées)",
-   "Baie ambrée-orangée, change de couleur (rouge immature)",
-   "Habitat: tourbière à sphaigne, jamais en forêt sèche"
-  ],
-  "confusions": "Aucune confusion mortelle au stade fruit; ne pas confondre les jeunes feuilles avec celles du potentille — elles poussent dans des milieux très différents."
- },
- {
-  "id": "framboise",
-  "img": null,
-  "nom": "Framboisier commun",
-  "latin": "Rubus idaeus",
-  "statut": "comestible",
-  "prudence": false,
-  "saison": "Juillet à septembre",
-  "habitat": "Bords de chemin, coupes, lisières, friches humides; aime les terres brûlées.",
-  "desc": "Arbrisseau à tiges épineuses blanchâtres sous les feuilles. Baie rouge qui se détache de son réceptacle blanc (cœur creux). Fruit frais très parfumé; feuilles en tisane.",
-  "carac": [
-   "Tiges à épines fines blanchâtres et duvet blanc",
-   "Feuille composée 3-5 folioles, revers blanchâtre",
-   "Fruit qui se détache en creux (cœur creux)",
-   "Fleurs blanches à 5 pétales, mai-juin"
-  ],
-  "confusions": "Framboise arctique (Rubus arcticus, comestible). Ne pas confondre le fruit avec la baie de morelle noire (toxique) qui ne pousse pas sur ronce épineuse."
- },
- {
-  "id": "fraise-sauvage",
-  "img": null,
-  "nom": "Fraise sauvage",
-  "latin": "Fragaria virginiana",
-  "statut": "comestible",
-  "prudence": false,
-  "saison": "Juin à juillet",
-  "habitat": "Clairières, bords de chemin, prairies, berges ensoleillées.",
-  "desc": "Petite fraise parfumée (2 cm) suspendue au-dessus des feuilles trifoliées dentées. Goût intense, bien supérieur à la fraise cultivée.",
-  "carac": [
-   "Fleur blanche à 5 pétales, centre jaune",
-   "Feuille trifoliée à dents marquées",
-   "Fruit rouge, calice appliqué, aiguilles graines enfoncées",
-   "Stolons coureurs (stolons) qui s'enracinent"
-  ],
-  "confusions": "Faux fraisier (Potentilla indica, non toxique mais insipide, fruit dressé). Attention: la potentille anserine a un fruit sec — pas une baie."
+  "confusions": "⚠️ SCILLE PENCHEE (Scilla erecta) et MUGUET (Convallaria majalis, TRÈS TOXIQUE) : feuilles quasi identiques mais SANS ODEUR D'AIL. La fleur du muguet est en clochettes blanches pendantes en chapelet. Règle vitale : si ça ne sent pas l'ail, on ne mange pas."
  },
  {
   "id": "amelanchier",
@@ -97,218 +25,130 @@
   "latin": "Amelanchier alnifolia",
   "statut": "comestible",
   "prudence": false,
-  "saison": "Juillet à août",
-  "habitat": "Bosquets, lisières, berges, pentes rocheuses; partout au Québec.",
-  "desc": "Arbuste 2-6 m aux baies violet-noir sucrées (appelées poires, saskatoon dans l'Ouest). Fleurs blanches en grappe avant les feuilles. Feuille ovale dentée; écorce grise lisse. En confitures, muffins, ou séché comme fruit.",
+  "saison": "Juin (fleurs) · juillet à août (baies)",
+  "habitat": "Lisières, bosquets, berges, pentes rocheuses, talus — partout au Québec, du sud jusqu'au boréal.",
+  "desc": "Arbuste 2-6 m aux grappes de baies violet-noir sucrées (dites « petites poires »). Fleurs blanches en grappe avant les feuilles au printemps — un des plus beaux arbustes en fleurs du Québec. Baie juteuse au goût de pomme-bleuet, excellente fraîche, en confiture, muffins ou séchée. Bois dense et dur autrefois prisé pour les manches d'outils.",
   "carac": [
-   "Baie pourpre-noir 8-12 mm à couronne en étoile",
-   "Feuille ovale dentée, dessus glabre",
-   "Fleurs blanches en grappe lâche en mai",
-   "Écorce grise lisse, branches à port dressé"
+   "Baies violet-noir de 8-12 mm avec « couronne » (calice) en étoile au sommet",
+   "Feuilles ovales dentées, dessus vert franc, presque rondes",
+   "Fleurs blanches à 5 pétales en grappe dressée (mai, avant les feuilles)",
+   "Écorce grise lisse sur troncs multiples à port dressé",
+   "Baies en grappes de 5-10, attachées au bout des rameaux"
   ],
-  "confusions": "Nerprun bourdaine (Rhamnus cathartica, toxique, purge) : fruits noirs en grappe, feuille à 3 paires de nervures courbes, écorce piquante d'odeur médicamenteuse. Ne jamais confondre."
+  "confusions": "⚠️ NERPRUN BOURDAINE (Rhamnus cathartica, TOXIQUE et purgatif) : baies noires en grappes SANS couronne au sommet, feuilles à 3 paires de nervures parallèles courbes, écorce à odeur médicamenteuse. L'amélanchier a la couronne en étoile et les fleurs blanches printanières caractéristiques."
  },
  {
-  "id": "vigne-rivages",
+  "id": "the-des-bois",
   "img": null,
-  "nom": "Vigne des rivages",
-  "latin": "Vitis riparia",
+  "nom": "Thé des bois (pincette, thé sucré)",
+  "latin": "Gaultheria procumbens",
   "statut": "comestible",
   "prudence": false,
-  "saison": "Septembre à octobre (après gel, plus sucrée)",
-  "habitat": "Rives, bordures de forêt, clôtures, milieux perturbés — grimpante partout au sud du Québec.",
-  "desc": "Vigne sauvage vigoureuse à écorce qui se détache en lanières. Grappes de baies pourpres à pruine, goût âcre qui s'améliore après gel. Feuille sinueuse-dentée, glabre dessous. Excellent jus et gelée.",
+  "saison": "Toute l'année (feuilles persistantes) · septembre-octobre (baies)",
+  "habitat": "Sous-bois de conifères, clairières saines, sols acides — partout au Québec sur sol sableux ou humifère acide.",
+  "desc": "Petit sous-arbrisseau rampant de 5-15 cm, feuilles persistantes vert foncé lustré à l'odeur de « pincette » (wintergreen) au froissement. Baie rouge vif de 8-12 mm au goût de menthe sucrée, restant sur la plante tout l'hiver. Feuilles et baies utilisées en tisane rafraîchissante. Huile essentielle aromatique (methyl salicylate) — en tisane, sans danger, mais ne pas concentrer en huile.",
   "carac": [
-   "Grimpante à vrilles opposées aux feuilles",
-   "Feuille grande, cordiforme, dentée, glabre dessous",
-   "Écorce qui se détache en bandes fibreuses",
-   "Grappes de baies pourpres, jus violet",
-   "Goût acidulé qui s'adoucit après gel"
+   "Plante tapissante de 5-15 cm, tige souterraine, rameau dressé",
+   "Feuilles ovales coriaces, lustrées, persistantes, ODEUR de wintergreen/pincette au froissement (test décisif)",
+   "Baie rouge vif de 8-12 mm, directement sous la couronne de feuilles du sommet",
+   "Petites fleurs blanches en cloches pendantes (juin-août)",
+   "Sous-bois de conifères, sols acides"
   ],
-  "confusions": "Vigne-vierge (Parthenocissus, non comestible mais non mortelle): feuilles dentées plus découpées, vrilles à petites ventouses. Les baies très amères (racémose) et en petites grappes clairsemées."
+  "confusions": "⚠️ BAIE DE PRAIRIE (maïs de poule, Maianthemum canadense) : baie rouge similaire mais feuilles en cœur, pas d'odeur de wintergreen, plante à rhizome sans odeur. Le thé des bois se reconnaît à son ODEUR de wintergreen unique et sa baie au sommet de la plante sous une couronne."
  },
  {
-  "id": "aralie",
+  "id": "petit-the",
   "img": null,
-  "nom": "Aralie à grappes (fausse salsepareille)",
-  "latin": "Aralia racemosa",
+  "nom": "Petit thé (raisin d'hiver, thé rampant)",
+  "latin": "Gaultheria hispidula",
   "statut": "comestible",
   "prudence": false,
-  "saison": "Août à septembre",
-  "habitat": "Sous-bois riches, talus, lisières; partout dans le sud du Québec.",
-  "desc": "Plante herbacée 1-2 m à grosse racine aromatique. Grappes de baies rouges sombres à saveur balsamique. Utilisée en sirop, sirop de racine (root beer), sirop contre la toux. Racine récoltée à l'automne.",
+  "saison": "Toute l'année (feuilles persistantes) · août-septembre (baies blanches)",
+  "habitat": "Sur et autour des souches, troncs décomposés, hummocks de sphaigne — boréal québécois, souvent avec le thé du Labrador en tourbières et forêts humides.",
+  "desc": "Cousin boréal du thé des bois : tiges filiformes rampantes sur la mousse et le bois mort, feuilles minuscules (3-8 mm) vert foncé lustré. Sous les feuilles : POILS ROUX RAIDES (hispidula = « finement hérissé ») visibles à la loupe — critère décisif. Baie blanche de 5-8 mm à l'odeur de wintergreen au froissement. Tisane aromatique délicate, traditionnelle contre les rhumes et maux de gorge.",
   "carac": [
-   "Grosse tige robuste, souvent violacée",
-   "Grandes feuilles composées pennées",
-   "Grappes de baies rouges en ombelle",
-   "Odeur balsamique de la racine au déterrement"
+   "Tiges filiformes rampantes sur mousse/bois mort, tapis de 1-5 cm de haut",
+   "Feuilles minuscules (3-8 mm), ovales, vert foncé lustré, persistantes",
+   "POILS ROUX RAIDES sous les feuilles et sur les tiges (visible à la loupe)",
+   "Baie blanche de 5-8 mm, hérissée, odeur de wintergreen au froissement",
+   "Petites fleurs blanches en cloches pendantes à l'aisselle des feuilles"
   ],
-  "confusions": "Aralie à grappes vs aralie épineuse (Aralia hispida, non toxique mais différente). Ne pas confondre avec le sureau; racine d'aralie aromatique ≠ racine de ciguë (jamais creuse ici)."
+  "confusions": "⚠️ BAIE BLANCHE commune (Symphoricarpos albus, non comestible) : baie blanche similaire mais plante DRESSÉE de 1 m des milieux secs, feuilles bien plus grandes, pas d'odeur de wintergreen, pas de poils roux. Le petit thé est TOUJOURS rampé sur la mousse à moins de 5 cm du sol."
  },
  {
-  "id": "ail-des-bois",
+  "id": "the-labrador",
   "img": null,
-  "nom": "Ail des bois (ail rampant)",
-  "latin": "Allium tricoccum",
-  "statut": "comestible",
-  "prudence": true,
-  "saison": "Avril à juin (feuille), août (graine)",
-  "habitat": "Érablières riches, sous-bois humides, fonds de vallée.",
-  "desc": "Oignon sauvage au goût d'ail puissant, 2-3 feuilles larges brillantes fanant à la floraison. Récolte encadrée (espèce vulnérable : 1 bulbe/fleur par année, jamais les racines). Utiliser feuille et bulbe, cru ou cuit.",
-  "carac": [
-   "2-3 feuilles larges (5-8 cm), vert franc, odeur d'ail puissante",
-   "Odeur d'ail dès qu'on froisse la feuille — test décisif",
-   "Fleur blanche en ombelle, juin",
-   "Bulbe allongé blanc, racines fines"
-  ],
-  "confusions": "Scille penchée (toxique, nausée, bradycardie) : feuilles identiques mais SANS ODEUR D'AIL. Sept-triumphalis (Convallaria, muguet) : aussi sans odeur. Règle : si ça ne sent pas l'ail, on ne mange pas."
- },
- {
-  "id": "fougere-aigle",
-  "img": null,
-  "nom": "Fougère-aigle (jeunes crosses)",
-  "latin": "Pteridium aquilinum",
+  "nom": "Thé du Labrador (ledum, bois de plaine)",
+  "latin": "Rhododendron groenlandicum",
   "statut": "comestible",
   "prudence": true,
-  "saison": "Mai à début juin (croisements de 15-30 cm seulement)",
-  "habitat": "Bords de chemin, coupes, terrains secs, brûlis, friches.",
-  "desc": "Les jeunes crosses en crosse de violon (croustillantes) sont un classique de la cueillette québécoise, à blanchir et bien cuire. Attention: la plante adulte est toxique (ptaquiloside); les crosses doivent être bien enroulées, à laine peu dense.",
+  "saison": "Toute l'année (feuilles persistantes, récolte printemps/automne de préférence)",
+  "habitat": "Tourbières, marécages, muskeg, bordure des lacs — LE thé boréal par excellence, partout au Québec sur sol tourbeux.",
+  "desc": "Arbrisseau 40-80 cm à feuilles persistantes étroites, vert mat dessus, ROUX FELTÉ dessous. Odeur épicée résineuse puissante au froissement. Les feuilles séchées et fermentées donnent LE thé boréal traditionnel — boisson des Premières Nations et des bûcherons, riche en vitamine C. ⚠️ Prudence : le ledol (terpène) peut être neurotoxique à FORTE dose — 1-2 tasses/jour maximum, ne pas concentrer, éviter en grossesse.",
   "carac": [
-   "Croisillon en forme de violon, laine légère",
-   "Tige lisse, creuse, cassante, vert franc",
-   "Petites feuilles dentelées en éventail au bout",
-   "Pousse en colonies sur sol sec et sableux"
+   "Arbrisseau 40-80 cm, feuilles étroites (2-5 cm) à bords légèrement recourbés",
+   "Dessous des feuilles ROUX FELTÉ (toile dense de poils roux) — critère décisif",
+   "Odeur épicée résineuse puissante au froissement",
+   "Fleurs blanches en ombelle serrée au sommet (mai-juin)",
+   "Toujours en tourbière, marécage ou muskeg — jamais en forêt sèche"
   ],
-  "confusions": "La fougère-femelle (comestible aussi) et la fougère-autruche (comestible) sont différentes. Confusion possible avec la fougère d'autruche (comestible). S'assurer que la crosse est ENROULÉE et la base NON duveteuse (prudence)."
+  "confusions": "⚠️ AUTRES ERICACEES des tourbières : le laurier des marais (Kalmia polifolia, TOXIQUE) a des feuilles plus longues à dessous vert (pas roux) et des fleurs roses en coupe. Le lédon palustre ancien (Ledum palustre) a un dessous plus rouille encore — lui aussi toxique à forte dose. Vérifier le DESSOUS ROUX FELTÉ + les fleurs BLANCHES en ombelle du vrai thé du Labrador."
  },
  {
-  "id": "sureau",
+  "id": "poivre-des-dunes",
   "img": null,
-  "nom": "Sureau du Canada (fleurs et baies cuites)",
-  "latin": "Sambucus canadensis",
+  "nom": "Poivre des dunes (chatons d'aulne crispé)",
+  "latin": "Alnus viridis spp. crispa",
   "statut": "comestible",
   "prudence": true,
-  "saison": "Fleurs juin-juillet, baies août-septembre",
-  "habitat": "Berges, milieux humides, friches, bords de chemin.",
-  "desc": "Arbuste aux grandes ombelles plates de fleurs blanches (sirop, beignets) puis de baies pourpres. Cuit obligatoirement (feuilles, fleurs crues et baies crues = légère toxicité due à des glycosides cyanogènes).",
+  "saison": "Chatons mâles : automne (après floraison) à mars — récolte idéale fin d'automne",
+  "habitat": "Aulnaies, berges, rivages sableux ou rocheux, coupes, pentes — boréal québécois, sur sols pauvres acides.",
+  "desc": "L'épice boréale par excellence : les chatons MÂLES immatures de l'aulne crispé, récoltés en automne/hiver, séchés puis moulus. Saveur complexe résineuse-citronnée-poivrée, sans être un vrai poivre. Très utilisé par les Premières Nations et la nouvelle cuisine nordique (marinades d'orignal, poissons, vinaigrettes). ⚠️ Prudence : abortif traditionnel, à éviter en début de grossesse — et modération en tisane (astringent).",
   "carac": [
-   "Arbuste 2-3 m, écorce lenticellée",
-   "Feuille composée à 5-7 folioles lancéolées",
-   "Ombelle plate, fleurs blanches à parfum sucré",
-   "Baies pourpres foncées en grappe retombante (août)"
+   "Arbuste 1-3 m à feuilles ovales vert franc, à bord doublement denté, aspect légèrement gaufré",
+   "Chatons mâles PENDANTS de 3-8 cm, gris-violacés puis roux (ressemblent à de longs chatons de noisetier)",
+   "Chatons femelles minuscules et dressés (cones ligneux sombres qui persistent l'hiver)",
+   "Froissement : odeur résineuse légèrement citronnée",
+   "Habitat: sols pauvres sableux ou rocheux, berges, aulnaies denses"
   ],
-  "confusions": "Sureau blanc (Sambucus racemosa, baies rouges en cône, toxiques crues) et la clintonie (baie bleue non comestible). Toujours cuire fleurs et baies; ne jamais manger de baie verte."
+  "confusions": "⚠️ AULNE ROUGE/INCISE (Alnus incana) : souvent à côté, mais écorce plus lisse, feuilles plus grandes, chatons plus longs et plus épais — saveur moins appréciée. Le VRAI poivre des dunes vient de l'aulne CRISPÉ (feuilles gaufrées, bords crispés, arbuste 1-3 m des milieux secs). Ne pas confondre les chatons avec des graines de bouleau (petites, en spirale)."
  },
  {
-  "id": "cigue-maculee",
+  "id": "myrique-baumier",
   "img": null,
-  "nom": "Ciguë maculée",
-  "latin": "Conium maculatum",
-  "statut": "mortel",
-  "prudence": false,
-  "saison": "Toute la saison (juin-septembre, plante adulte)",
-  "habitat": "Fossés, berges, friches, terrains vagues, bords de chemins.",
-  "desc": "La plante la plus mortelle du Québec : une poignée de feuilles ou quelques graines tuent un adulte (paralysie respiratoire — la boisson de Socrate). Touche glabre avec taches pourpres, odeur de souris/rat repoussante. À connaître absolument.",
-  "carac": [
-   "Tige lisse, creuse, avec taches pourpres à la base",
-   "Feuilles fines très découpées, odeur de souris/moisi",
-   "Fleurs blanches en ombelle plate",
-   "Plante 1,5-2,5 m, glabre et creuse",
-   "Sève claire, pas de lait"
-  ],
-  "confusions": "Carotte sauvage (Daucus carota, comestible): tige HÉRISSÉE de poils, sans taches, odeur de carotte, fleur plate à 1 point rouge central. Ciguë aquatique (mortelle aussi): habitat riverain, tubercule. En cas de doute: NE PAS TOUCHER."
- },
- {
-  "id": "cigue-aquatique",
-  "img": null,
-  "nom": "Ciguë aquatique (grand ciguë)",
-  "latin": "Cicuta virosa",
-  "statut": "mortel",
-  "prudence": false,
-  "saison": "Toute la saison (mai-octobre, racine toxique en tout temps)",
-  "habitat": "Marais, fossés, berges, eaux peu profondes; partout au Québec.",
-  "desc": "La plante LA PLUS MORTELLE d'Amérique du Nord : une racine de la taille d'une carotte tue un adulte en 15 minutes (convulsions, asphyxie). Racine à cloisons transversales. Confusion avec la carotte sauvage, le cerfeuil, la panais — toujours vérifier l'habitat et les cloisons.",
-  "carac": [
-   "Plante 0,8-1,5 m, tige creuse glabre",
-   "Feuilles finement découpées 2-3 fois",
-   "Racine en grappe, avec CHAMBRES à air (cloisons transversales en coupe)",
-   "Ombelle blanche plate, juillet-août",
-   "Milieu toujours humide (marais, fossé)"
-  ],
-  "confusions": "Carotte sauvage (tige poilu, odeur de carotte), cerfeuil, angélique — TOUTES poussent en sol plus sec ou différent. Règle de survie: aucune Ombellifère des marais n'est consommée sans identification experte de la racine."
- },
- {
-  "id": "morelle-noire",
-  "img": null,
-  "nom": "Morelle noire",
-  "latin": "Solanum nigrum",
-  "statut": "toxique",
-  "prudence": false,
-  "saison": "Juillet à octobre",
-  "habitat": "Friches, jardins, bords de chemin, terrains vagues, décombres.",
-  "desc": "Herbe dressée ou étalée 20-60 cm à baies noires luisantes en petits bouquets. Toutes les parties vertes sont toxiques (solanine). Les baies mûres sont parfois consommées cuites dans certaines cultures — hors de question ici.",
-  "carac": [
-   "Baies noires mat, 6-10 mm, non luisantes",
-   "Feuille ovale, dentée grossièrement, à l'odeur forte",
-   "Fleur blanche à 5 pétales renversés, centre jaune",
-   "Fruit en petites grappes pendantes"
-  ],
-  "confusions": "Bleuet terrestre (comestible) : baie avec couronne, feuille dentée différente, plante ligneuse. Morelle douce-amère (Solanum dulcamara) : grappe luisante, aussi toxique."
- },
- {
-  "id": "datura",
-  "img": null,
-  "nom": "Datura stramoine",
-  "latin": "Datura stramonium",
-  "statut": "mortel",
-  "prudence": false,
-  "saison": "Juin à octobre (toute plante toxique)",
-  "habitat": "Friches riches, bords de champs, dépotoirs, composts; sud du Québec.",
-  "desc": "Plante annuelle dressée à grande fleur blanche en trompette et capsule épineuse (pomme épineuse). TOUTE LA PLANTE est toxique-hallucinogène et potentiellement létale (alcaloïdes tropaniques). Une seule graine peut tuer un enfant.",
-  "carac": [
-   "Grande fleur blanche en trompette (10-20 cm), parfum nocturne",
-   "Capsule épineuse de la taille d'une balle de golf",
-   "Feuille grande, ovale, à l'odeur fétide",
-   "Tige glabrescente à teinte pourpre",
-   "Fréquente en sol riche perturbé"
-  ],
-  "confusions": "Aucune comestible. Risque de confusion avec le lis ou la fleur d'ornement — jamais les fleurs en trompette ne se consomment."
- },
- {
-  "id": "phytolague",
-  "img": null,
-  "nom": "Raisin d'Amérique (phytolacque)",
-  "latin": "Phytolacca americana",
-  "statut": "toxique",
-  "prudence": false,
-  "saison": "Août à octobre",
-  "habitat": "Friches, bords de chemins, terrains vagues, lisières; surtout au sud du fleuve.",
-  "desc": "Grande herbe (2-3 m) à grappes de baies noires-pourpres luisantes sur pédoncules rouges, tige souvent rouge. Toutes les parties sont toxiques (racine surtout). Les jeunes pousses sont comestibles après double cuisson — mais c'est une plante pour experts, pas pour cueilleurs occasionnels.",
-  "carac": [
-   "Tige robuste rosée/violacée",
-   "Grappes de baies pourpres noires, jus pourpre vif",
-   "Feuilles grandes, lancéolées, vert tendre",
-   "Racine blanche épaisse (très toxique crue)"
-  ],
-  "confusions": "Aucune confusion mortelle courante au Québec; ne pas confondre les baies avec celles du sureau (grappes aplaties, feuille opposée en bouquet)."
- },
- {
-  "id": "berce-laineuse",
-  "img": null,
-  "nom": "Berce laineuse (berce du Canada)",
-  "latin": "Heracleum maximum",
-  "statut": "toxique",
+  "nom": "Myrique baumier (bois-sent-bon, piment royal)",
+  "latin": "Myrica gale",
+  "statut": "comestible",
   "prudence": true,
-  "saison": "Juin à août",
-  "habitat": "Berges, fossés, lisières humides, clairières; très commune.",
-  "desc": "Grande ombellifère indigène (1-2,5 m) à fleurs blanches en parasol. Sa sève REND LA PEAU PHOTOSENSIBLE (phytophotodermatite grave, ampoules au soleil). Confusion mortelle possible avec la berce du Caucase (invasive, encore plus dangereuse) et la ciguë maculée.",
+  "saison": "Feuilles : mai-septembre · Chatons : récolte hivernale · Fruits : août-septembre",
+  "habitat": "Tourbières, marécages, bords de lacs et rivières, platières humides — boréal québécois, en touffes denses.",
+  "desc": "Arbrisseau 1-2 m au feuillage vert-bleuté à l'odeur BALSAMIQUE puissante (d'où son surnom de bois-sent-bon). Feuilles fines dentées couvertes de points résineux jaunes. Tisane digestive, épice sauvage exceptionnelle (marinades, sel aromatique, gin boréal), répulsif à moustiques traditionnel (froisser sur la peau). ⚠️ Prudence : plante puissante, 1-2 tasses/jour max, éviter en grossesse.",
   "carac": [
-   "Grande ombelle blanche, plate, 20-30 cm",
-   "Feuille très grande, lobée, dessous duveteux",
-   "Tige creuse, épaisse, hérissée de poils",
-   "Sève qui brûle la peau au soleil",
-   "Pousse en bord d'eau, lisière humide"
+   "Arbrisseau 1-2 m à feuilles fines (2-5 cm) étroites, vert-bleuté, dentées vers le sommet",
+   "Points résineux jaunes visibles sur le dessous des feuilles (loupe)",
+   "Odeur balsamique PUISSANTE au froissement — la plante sent de loin",
+   "Chatons mâles écailleux roux avant les feuilles (avril-mai)",
+   "Toujours en milieu humide : tourbière, berge, marécage"
   ],
-  "confusions": "Angélique (comestible, mais aussi phototoxique), carotte sauvage (tige hérisée), panais sauvage (sève aussi phototoxique). Règle: JAMAIS d'ombellifère cueillie sans identification parfaite, gants si on la manipule."
+  "confusions": "⚠️ COMPTONIE VOYAGEUSE (aussi aromatique et parfois voisine) : feuilles de fougère découpées, non dentées, sur sol sec sablonneux. Le SAPIN BAUMIER (conifère) n'est PAS le myrique — confusion de nom uniquement. Le myrique a des feuilles SIMPLES dentées vert-bleuté avec points résineux."
+ },
+ {
+  "id": "comptonie-voyageuse",
+  "img": null,
+  "nom": "Comptonie voyageuse (fougère du Nord, sweet fern)",
+  "latin": "Comptonia peregrina",
+  "statut": "comestible",
+  "prudence": false,
+  "saison": "Feuilles : mai à octobre (plus parfumées en été chaud) · Graines : septembre-octobre",
+  "habitat": "Terrains sablonneux secs, brûlis, coupes, bords de chemins sableux, plaines sableuses du Lac-Saint-Jean et de l'Abitibi — en colonies denses par rhizomes.",
+  "desc": "Arbrisseau 0,5-1,5 m aux feuilles découpées comme des frondes de fougère, à l'odeur balsamique de sapin baumier qui envahit les sableuses brûlées d'été. Tisane rafraîchissante traditionnelle, épice des côtes de porc et des marinades, feux de camp parfumés aux branches (les Premières Nations l'utilisaient pour fumiger et se rafraîchir). S'installe en colonies denses après les brûlis — d'où son rôle de pionnière.",
+  "carac": [
+   "Feuilles 7-15 cm très découpées en lanières étroites (aspect de fougère)",
+   "Odeur balsamique de sapin baumier au froissement, plus intense en été chaud",
+   "Arbrisseau 0,5-1,5 m, tiges brun rougeâtre",
+   "Chatons cylindriques roux au printemps (avril-mai)",
+   "Colonies denses sur sable sec, brûlis, coupes — jamais en tourbière"
+  ],
+  "confusions": "⚠️ MYRIQUE BAUMIER (aussi aromatique) : feuilles SIMPLES dentées vert-bleuté en milieu HUMIDE. La comptonie a des feuilles découpées type fougère en milieu SEC. Aucune confusion mortelle — les deux sont comestibles. Ne pas confondre avec les jeunes frondes de fougères réelles (fougère-aigle, potentiellement toxiques crues)."
  }
 ]
