@@ -4,14 +4,14 @@ L'app peut vous aider à **identifier une plante ou une baie à partir d'une pho
 détaillée** ou des **illustrations** — mais uniquement si vous ajoutez votre **propre clé d'IA**.
 C'est **entièrement optionnel** : l'app fonctionne très bien sans.
 
-> 💡 Vous n'êtes **pas obligé d'utiliser l'IA**. Le guide de 17 espèces et la checklist terrain
+> 💡 Vous n'êtes **pas obligé d'utiliser l'IA**. Le guide de 8 espèces et la checklist terrain
 > fonctionnent hors-ligne, sans aucune clé.
 
 ## À quoi sert l'IA ?
 
 | Fonction | Où | Ce que ça fait |
 |---|---|---|
-| 🍄 **Identifier par photo** | Onglet Identifier → **📷 Appareil** ou **🖼️ Une photo** | Photographiez la plante entière (feuille, fruit, tige), l'IA propose une espèce avec un **niveau de confiance**. |
+| 🌿 **Identifier par photo** | Onglet Identifier → **📷 Appareil** ou **🖼️ Une photo** | Photographiez la plante entière (feuille, fruit, tige), l'IA propose une espèce avec un **niveau de confiance**. |
 | 📝 **Fiche détaillée par IA** | Nouvelle variété → **✨ Détails par IA** | Entrez un nom (latin de préférence), l'IA rédige description, caractéristiques, confusions, saison, habitat. |
 | 🎨 **Illustrations par IA** | Nouvelle variété → **🎨 Illustration IA** | Génère une image par spécificité (feuille, fruit, tige, odeur, habitat). |
 
@@ -43,13 +43,13 @@ Dans **⚙️ Paramètres → 🤖 Fournisseur d'IA**, vous pouvez choisir le se
 ## 🧭 Utiliser l'IA
 
 ### Identifier par photo
-1. Onglet **🍄 Identifier** → **📷 Appareil photo**.
+1. Onglet **🌿 Identifier** → **📷 Appareil photo**.
 2. Cadrez la plante entière : **feuille et fruit visibles**, base de la tige au besoin.
 3. L'IA propose une espèce avec son niveau de confiance. **Le guide garde toujours le dernier mot**
-   sur la comestibilité : une espèce mortelle n'est **jamais** affichée comestible.
+   sur la comestibilité : une espèce non comestible n'est **jamais** affichée comestible.
 
 ### Fiche détaillée
-1. Onglet **🍄 Identifier** → bouton **＋** → **Nouvelle variété**.
+1. Onglet **🌿 Identifier** → bouton **＋** → **Nouvelle variété**.
 2. Étape 1 : entrez le nom (latin de préférence), statut, saison.
 3. Appuyez sur **✨ Détails par IA** → l'IA remplit la fiche. **Vérifiez** chaque champ avant d'enregistrer.
 
@@ -66,5 +66,5 @@ Dans **⚙️ Paramètres → 🤖 Fournisseur d'IA**, vous pouvez choisir le se
 - La photo envoyée est **nettoyée de ses métadonnées** (dont le GPS) — votre position ne quitte pas l'appareil.
 - **Ne partagez jamais votre clé** avec qui que ce soit.
 
-> 🍄 L'IA est un **bon coup de pouce** pour explorer, mais la **règle d'or reste** : en cas de doute,
+> 🌿 L'IA est un **bon coup de pouce** pour explorer, mais la **règle d'or reste** : en cas de doute,
 > **on ne mange pas**.

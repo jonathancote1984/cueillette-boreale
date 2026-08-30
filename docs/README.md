@@ -7,10 +7,10 @@ Ce dossier est le wiki du projet : une page par sujet, en français du Québec, 
 relatifs qui fonctionnent aussi bien sur GitHub que dans un éditeur local.
 
 Cueillette Boréale est un **fork boréal** de l'app de cueillette champignons « Memphis » :
-l'app est réorientée vers les **17 plantes et baies boréales du Québec** — 11 comestibles
-(dont 4 à manipuler ou manger avec prudence), 3 toxiques, 3 mortelles. Les champignons sont
-**retirés du fork** : aucune fiche de champignon n'y subsiste. La source de vérité du contenu
-est [especes-boreales.md](especes-boreales.md) et son jumeau `especes-boreales.json`.
+l'app est réorientée vers les **8 plantes et baies boréales du Québec, toutes comestibles
+(dont 3 avec prudence)**. Les champignons sont **retirés du fork** : aucune fiche de
+champignon n'y subsiste. La source de vérité du contenu est
+[especes-boreales.md](especes-boreales.md) et son jumeau `especes-boreales.json`.
 
 ## Par où commencer
 
@@ -34,14 +34,14 @@ est [especes-boreales.md](especes-boreales.md) et son jumeau `especes-boreales.j
   serveur local, mise à jour du cache `cqb-vN`, dépannage.
 - **[Fonctionnalités](fonctionnalites.md)** — spots, identification, cueillettes, stats,
   sauvegarde, paramètres.
-- **[Guide d'identification](guide-identification.md)** — les 17 espèces documentées, la
+- **[Guide d'identification](guide-identification.md)** — les 8 espèces documentées, la
   checklist terrain à 5 critères (feuille, fruit, tige, odeur, habitat), l'identification
   par photo et ses limites.
-- **[Espèces boréales](especes-boreales.md)** — la liste des 17 espèces, leurs statuts et
+- **[Espèces boréales](especes-boreales.md)** — la liste des 8 espèces, leurs statuts et
   leurs confusions dangereuses ; source de vérité du contenu.
 - **[Sécurité alimentaire](securite-alimentaire.md)** — badges de statut, règle « plus grave
-  gagne », centre antipoison, confusions ciguë maculée/carotte sauvage et ciguë
-  aquatique/berce laineuse, primauté du guide sur l'IA.
+  gagne », centre antipoison, confusions ail des bois/muguet et thé du Labrador/laurier des
+  marais, primauté du guide sur l'IA.
 - **[Données et confidentialité](donnees-confidentialite.md)** — IndexedDB `cqb_bd` v5, clés
   Gemini/OpenRouter locales, ré-encodage des photos, export/import JSON version 5.
 - **[Design](design.md)** — palette vert sapin (ivoire `#EFF3EC`, primaire `#1E4D33`,
@@ -63,7 +63,7 @@ Ces fichiers restent la source de vérité de leur domaine ; le wiki les résume
 |---|---|
 | [../DESIGN.md](../DESIGN.md) | Système de design complet : tokens, couleurs nommées, composants, règles do/don't. |
 | [../PRODUCT.md](../PRODUCT.md) | Vérité produit : usagers, contexte d'usage, capacités, contraintes, principes. |
-| [especes-boreales.json](especes-boreales.json) | Jumeau machine des 17 fiches de plantes (schéma documenté dans especes-boreales.md). |
+| [especes-boreales.json](especes-boreales.json) | Jumeau machine des 8 fiches de plantes (schéma documenté dans especes-boreales.md). |
 | [AUDIT_RAPPORT.md](AUDIT_RAPPORT.md) | Audit webapp consolidé (sécurité, qualité, performance) avec plan de correction. |
 | [AUDIT_SECU.md](AUDIT_SECU.md) | Constats de sécurité détaillés. |
 | [AUDIT_QUALITE.md](AUDIT_QUALITE.md) | Constats de qualité de code. |

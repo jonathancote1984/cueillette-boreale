@@ -46,27 +46,29 @@ Enregistrement des coins de cueillette.
 L'onglet le plus riche. Il combine un guide de référence, une méthode de vérification
 terrain et des fonctions d'IA facultatives.
 
-### Guide des 17 plantes boréales
+### Guide des 8 plantes boréales
 
 - Recherche par nom (français ou latin), avec anti-rebond.
 - Filtres en listes déroulantes : **comestibilité** et **saison**.
 - Chaque espèce affiche une pastille de statut : comestible, prudence, toxique,
   **MORTEL**, ou inconnu.
 
-Répartition du guide : 11 comestibles (dont 4 à prudence — ail des bois, fougère-aigle,
-sureau du Canada, plus la vigilance générale), 3 toxiques, 3 mortelles. Liste complète dans
-[Espèces boréales](especes-boreales.md) et [Guide d'identification](guide-identification.md).
+Répartition du guide : 8 plantes et baies boréales, toutes comestibles (dont 3 à prudence —
+ail des bois, thé du Labrador, poivre des dunes). Aucune espèce toxique ni mortelle au guide.
+Liste complète dans [Espèces boréales](especes-boreales.md) et
+[Guide d'identification](guide-identification.md).
 
 ### Fiche d'espèce
 
 - Nom français, nom latin, statut, saison, habitat, description.
-- **Confusions dangereuses** explicitement nommées (ciguë maculée vs carotte sauvage,
-  ciguë aquatique, berce laineuse, scille penchée…).
+- **Confusions dangereuses** explicitement nommées (ail des bois vs muguet/scille penchée,
+  thé du Labrador vs laurier des marais, petit thé vs baie blanche, thé des bois vs maïs de
+  poule…).
 - **Checklist terrain** : 5 spécificités (feuille ; fruit ; tige ; odeur ; habitat), chacune
   avec la description de ce qu'il faut observer. Les cases cochées sont persistées
   localement (store `checklist`), avec compteur « n/5 » et verdict.
-- Alerte rouge non négociable sur les espèces mortelles, avec le numéro du centre
-  antipoison.
+- Alerte rouge non négociable sur toute espèce non comestible (hors guide ou variété déclarée
+  dangereuse), avec le numéro du centre antipoison.
 - Bouton pour masquer l'espèce (elle peut être restaurée) ou la supprimer définitivement
   (double confirmation).
 

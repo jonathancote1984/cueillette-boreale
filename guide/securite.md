@@ -12,9 +12,9 @@ Chaque espèce et chaque récolte portent un badge :
 | Badge | Signification | Consigne |
 |---|---|---|
 | ✅ **Comestible** | Espèce sûre | Prudence et vérification restent de mise |
-| ⚠️ **Prudence** | Cuisson obligatoire, espèce vulnérable ou confusion possible (ail des bois, fougère-aigle, sureau du Canada) | Bien cuire, vérifier chaque critère |
-| ❌ **Toxique** | À éviter — digestion, neurologie ou brûlures (berce laineuse, sève phototoxique) | Ne pas consommer |
-| ☠️ **MORTEL** | Dangereux, potentiellement fatal (ciguë maculée, ciguë aquatique, datura) | **Ne jamais consommer** |
+| ⚠️ **Prudence** | Espèce vulnérable ou modération (ail des bois, thé du Labrador, poivre des dunes) | Vérifier chaque critère, modération |
+| ❌ **Toxique** | À éviter — digestion, neurologie ou brûlures (espèce hors guide ou variété déclarée dangereuse) | Ne pas consommer |
+| ☠️ **MORTEL** | Dangereux, potentiellement fatal (espèce hors guide ou variété déclarée dangereuse) | **Ne jamais consommer** |
 | ⚠️ **Inconnu** | Information incertaine | Vérifier avec un expert |
 
 ## La règle du « plus grave gagne »
@@ -27,11 +27,11 @@ peut **jamais** apparaître comme comestible, même par erreur de frappe.
 
 | On cherche… | On risque de cueillir… | Ce qui tranche |
 |---|---|---|
-| Carotte sauvage | **Ciguë maculée** ☠️ | tige **lisse à taches pourpres**, odeur de souris — vs tige **poilue**, odeur de carotte |
-| Ombellifères de berges | **Ciguë aquatique** ☠️ (la plus mortelle d'Amérique du Nord) | racine **à cloisons transversales** — déterrez la base ; dans le doute, on ne cueille pas |
-| Angélique, carotte sauvage | **Berce laineuse** ❌ | sève **phototoxique** (contact + soleil = brûlures) ; tige à poils laineux — gants obligatoires |
-| Oignon sauvage | **Scille penchée** ❌ (toxique) | l'ail des bois **sent l'ail** au froissage ; la scille, aucune odeur d'ail |
-| Petites baies noires | **Morelle noire** ❌ | baies en grappes **sans couronne** au sommet |
+| Oignons sauvages | **Muguet / scille penchée** ❌ | l'ail des bois **sent l'ail** au froissage ; muguet et scille, **aucune odeur d'ail** — si ça ne sent pas l'ail, on ne mange pas |
+| Thé du Labrador | **Laurier des marais** ❌ | dessous des feuilles **roux feutré** (vrai thé) vs **vert** ; fleurs **blanches** vs **roses** |
+| Petit thé | **Baie blanche** ⚠️ (non comestible) | plante **rampante** sur mousse + **poils roux** vs plante **dressée** des milieux secs |
+| Thé des bois | **Maïs de poule** ⚠️ | odeur de **wintergreen** (pincette), uniquement sur le thé des bois |
+| Poivre des dunes | **Autres aulnes** ⚠️ | feuilles **gaufrées crispées** du petit aulne des milieux secs |
 
 ## Le centre antipoison
 
@@ -45,8 +45,8 @@ En cas de détresse respiratoire, de convulsions ou de perte de conscience : **9
 ## Vos 5 réflexes avant de consommer
 
 1. **Cochez la checklist** des 5 critères (feuille, fruit, tige, odeur, habitat) sur la plante réelle devant vous.
-2. **Déterrez la base** au moindre doute — certaines confusions mortelles se tranchent sous le sol.
-3. **Méfiez-vous des sosies** : plusieurs espèces mortelles ressemblent à des comestibles (ciguë maculée / carotte sauvage).
+2. **Déterrez la base** au moindre doute — certains indices décisifs se tranchent sous le sol.
+3. **Méfiez-vous des sosies** : les plantes du guide ont parfois un sosie toxique ou non comestible (ail des bois vs muguet, thé du Labrador vs laurier des marais).
 4. **Faites vérifier par une personne compétente** si vous avez le moindre doute.
 5. **Ne mangez jamais une plante que vous ne pouvez pas nommer** avec certitude — et ne goûtez jamais cru une espèce qui exige la cuisson.
 

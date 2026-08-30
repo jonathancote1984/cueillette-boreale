@@ -38,25 +38,32 @@ Corollaires appliqués dans l'app :
 | Badge | Statut | Signification |
 |---|---|---|
 | vert | **Comestible** | espèce comestible correctement identifiée |
-| ambre | **Prudence** | comestible sous condition : cuisson obligatoire (sureau, fougère-aigle), espèce vulnérable (ail des bois), ou confusion dangereuse possible |
-| orange | **Toxique** | intoxication : troubles digestifs, neurologiques, brûlures phototoxiques (berce laineuse) |
+| ambre | **Prudence** | comestible sous condition : espèce vulnérable ou modération (ail des bois, thé du Labrador, poivre des dunes), ou confusion dangereuse possible |
+| orange | **Toxique** | intoxication : troubles digestifs, neurologiques ou brûlures phototoxiques |
 | rouge, ☠️ | **MORTEL** | peut tuer — aucune préparation ne rend l'espèce consommable |
 | gris, ⚠️ | **Inconnu** | statut non résolu (import douteux, réponse d'IA invalide) — traiter comme dangereux |
 
 Le rouge est réservé au danger et à la destruction ; il n'est jamais décoratif. Une alerte
-mortelle **ne peut pas** être affichée sans le numéro du centre antipoison.
+mortelle **ne peut pas** être affichée sans le numéro du centre antipoison. Aucune des
+8 espèces du guide ne porte un statut toxique ou mortel : ces badges signalent des espèces
+hors guide ou des variétés perso déclarées dangereuses.
 
-## Confusions mortelles du guide boréal
+## Confusions à connaître du guide boréal
 
-Reprises des fiches d'[especes-boreales.md](especes-boreales.md) — à connaître par cœur :
+Reprises des fiches d'[especes-boreales.md](especes-boreales.md) — à connaître par cœur.
+Les 8 espèces du guide sont toutes comestibles, mais plusieurs ont un **sosie toxique ou non
+comestible** à savoir écarter :
 
-| Espèce dangereuse | Confusion possible | Ce qui tranche |
+| Espèce du guide | Sosie à écarter | Ce qui tranche |
 |---|---|---|
-| **Ciguë maculée** (mortelle — paralysie respiratoire) | carotte sauvage | tige lisse **à taches pourpres**, odeur de souris — vs tige **poilue** et odeur de carotte. *La confusion qui tue.* |
-| **Ciguë aquatique** (la plus mortelle d'Amérique du Nord) | ombellifères comestibles de berges | racine **à cloisons transversales** à la coupe. Déterrer la base ; dans le doute, on ne cueille pas. |
-| **Berce laineuse** (toxique — sève **phototoxique**) | angélique, carotte sauvage | grande ombellifère à tige **poils laineux** ; contact de la sève + soleil = brûlures. Ne pas manipuler à mains nues. |
-| **Scille penchée** (toxique) vs ail des bois | oignons sauvages | l'ail des bois **sent l'ail** ; la scille, aucune odeur d'ail. Espèce vulnérable : cueillette encadrée. |
-| **Morelle noire** (toxique) | petites baies noires | baies en grappes **sans couronne** au sommet |
+| **Ail des bois** | **Muguet** (très toxique) et **scille penchée** (toxique) | l'ail des bois **sent l'ail** au froissage ; muguet et scille, **aucune odeur d'ail**. *Si ça ne sent pas l'ail, on ne mange pas.* |
+| **Thé du Labrador** | **Laurier des marais** (toxique) | dessous des feuilles **roux feutré** (vrai thé) vs **vert** (laurier) ; fleurs **blanches** en ombelle vs **roses** en coupe |
+| **Petit thé** | **Baie blanche** (non comestible) | plante **rampante** sur mousse + **poils roux** sous les feuilles vs plante **dressée** des milieux secs |
+| **Thé des bois** | **Maïs de poule** (baie de prairie) | odeur de **wintergreen** (pincette) au froissement, uniquement sur le thé des bois |
+| **Poivre des dunes** | **Autres aulnes** (rouge/incise) | feuilles **gaufrées crispées** du petit aulne 1-3 m des milieux secs |
+| **Comptonie / myrique** | **Myrique baumier / comptonie voyageuse** | feuilles **de fougère** (sol sec) vs **dentées** (milieu humide) — les deux restent comestibles |
+
+Espèce vulnérable : récolte encadrée de l'ail des bois.
 
 ## Où l'app affiche des avertissements
 
@@ -74,7 +81,7 @@ Reprises des fiches d'[especes-boreales.md](especes-boreales.md) — à connaît
 Le croisement entre la réponse de l'IA et le guide suit une échelle de gravité. Concrètement :
 
 1. Le nom retourné par l'IA est normalisé (accents, tirets, espaces, points) et comparé à la
-   base complète : les 17 espèces du guide, les variétés perso, leurs synonymes, et les
+   base complète : les 8 espèces du guide, les variétés perso, leurs synonymes, et les
    espèces supprimées (tombes).
 2. La comparaison tolère les fautes de frappe (distance de Levenshtein) et les inclusions.
 3. Si une correspondance existe, **le statut le plus grave des deux sources est retenu** —
@@ -99,7 +106,7 @@ Mesures connexes, du côté technique :
   contre une liste blanche (`comestible`, `toxique`, `mortel`, `inconnu`) ;
 - toute valeur hors liste devient `inconnu`, jamais `comestible` ;
 - le prompt interdit explicitement au modèle de répondre « comestible » sans prudence pour une
-  espèce qui exige une cuisson obligatoire (sureau du Canada, fougère-aigle) ;
+  espèce qui exige modération ou vigilance (thé du Labrador, poivre des dunes) ;
 - politique de sécurité du contenu (CSP) restreignant les connexions sortantes à Wikimedia
   Commons et aux API Gemini / OpenRouter.
 
@@ -109,7 +116,8 @@ Détails techniques : [Données et confidentialité](donnees-confidentialite.md)
 ## Limites assumées de l'app
 
 - L'app ne sent pas, ne goûte pas, ne déterre pas de racine, ne fait pas de test chimique.
-- Le guide couvre **17 espèces** : la flore boréale du Québec en compte des centaines.
+- Le guide couvre **8 plantes et baies boréales, toutes comestibles (dont 3 à prudence)** :
+  la flore boréale du Québec en compte des centaines.
 - L'aspect d'une plante varie selon l'âge, la saison, le sol et la lumière.
 - L'IA peut se tromper avec assurance : la confiance affichée est une estimation du modèle,
   pas une garantie.
@@ -124,7 +132,7 @@ compétente, sur une plante réelle.
 - Ne récolter que ce qu'on est capable d'identifier avec certitude, et seulement ce qu'on va
   manger.
 - Prélever avec parcimonie : laisser la plante enracinée et les baies pour la faune, sauf si
-  la partie visée l'exige (crosses de fougère-aigle).
+  la partie visée l'exige (bulbe d'ail des bois, chatons de poivre des dunes).
 - Panier ou contenant aéré plutôt que sac de plastique fermé (les baies mûres s'écrasent et
   fermentent vite).
 - Respecter les terres privées, les parcs et les zones protégées : la cueillette y est
@@ -133,7 +141,8 @@ compétente, sur une plante réelle.
 - Cuire suffisamment les espèces qui l'exigent ; ne jamais goûter cru pour « voir ».
 - Servir une petite quantité la première fois qu'on mange une espèce nouvelle, et ne pas
   mélanger plusieurs espèces nouvelles au même repas.
-- Gants pour toute plante à sève suspecte (berce laineuse) : la sève est phototoxique.
+- Gants pour toute plante à sève suspecte ou inconnue : la sève de certaines plantes est
+  irritante ou phototoxique.
 
 Voir aussi : [Guide d'identification](guide-identification.md) ·
 [Espèces boréales](especes-boreales.md) · [Fonctionnalités](fonctionnalites.md)

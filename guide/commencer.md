@@ -13,7 +13,7 @@
 | Onglet | À faire en premier |
 |---|---|
 | 📍 **Spots** | Enregistrez votre premier coin de cueillette (bouton rond **＋** en bas à droite). |
-| 🌿 **Identifier** | Explorez le guide de 17 plantes boréales, cherchez une espèce, ouvrez une fiche. |
+| 🌿 **Identifier** | Explorez le guide de 8 plantes boréales, cherchez une espèce, ouvrez une fiche. |
 | 🧺 **Cueillettes** | Notez votre première récolte. |
 | 📊 **Stats** | Regardez vos totaux (ils se remplissent au fil des cueillettes). |
 | ⚙️ **Paramètres** | Choisissez vos unités (kg ou lb) et, si vous voulez, ajoutez votre clé d'IA. |

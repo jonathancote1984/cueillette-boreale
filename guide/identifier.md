@@ -1,6 +1,6 @@
 # 🌿 Identifier
 
-L'onglet **Identifier** contient un guide de **17 plantes et baies boréales du Québec**, avec
+L'onglet **Identifier** contient un guide de **8 plantes et baies boréales du Québec**, avec
 une **checklist terrain** pour vérifier chaque critère devant la plante réelle.
 
 ## Parcourir le guide
@@ -9,9 +9,10 @@ une **checklist terrain** pour vérifier chaque critère devant la plante réell
 2. **🔎 Cherchez** une espèce par son nom (français ou latin), ou **filtrez** par comestibilité ou saison.
 3. Ouvrez une fiche pour lire la description, les caractéristiques, les **confusions dangereuses** et la **saison**.
 
-Le guide compte **17 espèces** : 11 comestibles (dont 4 à prudence — ail des bois,
-fougère-aigle, sureau du Canada…), 3 toxiques (morelle noire, raisin d'Amérique, berce
-laineuse) et 3 mortelles (ciguë maculée, ciguë aquatique, datura stramoine).
+Le guide compte **8 plantes et baies boréales, toutes comestibles** (ail des bois,
+amélanchier, thé des bois, petit thé, thé du Labrador, poivre des dunes, myrique baumier,
+comptonie voyageuse), dont 3 à prudence — ail des bois, thé du Labrador et poivre des dunes.
+Aucune espèce toxique ni mortelle au guide.
 
 ## La checklist terrain (5 critères)
 
@@ -27,10 +28,10 @@ Le verdict s'affiche en bas :
 
 - ⚠️ **Rien n'est encore vérifié** → ne consommez pas.
 - ✅ **Tout correspond** → espèce comestible (ou à prudence) signalée clairement.
-- ☠️ **Espèce mortelle** → **ne jamais consommer**, même si tout semble correspondre.
+- ☠️ **Espèce non comestible** (hors guide ou variété déclarée dangereuse) → **ne jamais consommer**, même si tout semble correspondre.
 
-> 🚨 **Déterrez la base de la plante si le doute persiste** : la racine à cloisons
-> transversales de la ciguë aquatique se voit seulement sous le sol.
+> 🚨 **Déterrez la base de la plante si le doute persiste** : le bulbe allongé blanc de
+> l'ail des bois et la base d'une tige douteuse se tranchent sous le sol.
 
 ## Identifier par photo (IA)
 

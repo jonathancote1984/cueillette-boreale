@@ -9,7 +9,7 @@
 ## Sommaire
 
 - [Méthode en cinq critères](#méthode-en-cinq-critères)
-- [Les 17 espèces documentées](#les-17-espèces-documentées)
+- [Les 8 espèces documentées](#les-8-espèces-documentées)
 - [Confusions à connaître au Québec](#confusions-à-connaître-au-québec)
 - [Lire les verdicts de la checklist](#lire-les-verdicts-de-la-checklist)
 - [Identification par photo (IA)](#identification-par-photo-ia)
@@ -30,15 +30,15 @@ qu'un cueilleur peut observer sur place, dans cet ordre :
 
 Deux réflexes non négociables :
 
-1. **Déterrer la base de la plante au besoin** — tige enterrée, bulbe ou racine : certaines
-   confusions mortelles se tranchent sous le sol (la racine à cloisons transversales de la
-   ciguë aquatique).
+1. **Déterrer la base de la plante au besoin** — tige enterrée, bulbe ou racine : certains
+   éléments décisifs se tranchent sous le sol (le bulbe allongé blanc de l'ail des bois, la
+   base d'une tige douteuse).
 2. **Vérifier les cinq critères, pas un seul.** Une feuille qui ressemble ne prouve rien.
 
-## Les 17 espèces documentées
+## Les 8 espèces documentées
 
-Statuts : ✅ comestible · ⚠️ comestible mais **cuisson ou prudence obligatoire** ·
-☣️ toxique · ☠️ **mortel**.
+Statuts : ✅ comestible · ⚠️ comestible mais **prudence d'usage** (modération, espèce
+vulnérable ou confusion à vérifier). Aucune espèce du guide n'est toxique ni mortelle.
 
 La liste complète (nom, latin, saison, habitat, description, confusions) fait l'objet de la
 page [Espèces boréales](especes-boreales.md) et du fichier `especes-boreales.json` — la
@@ -46,13 +46,11 @@ source de vérité technique. Répartition :
 
 | Statut | Espèces |
 |---|---|
-| ✅ Comestibles | 8 — bleuet nain, camarine noire, chicouté, framboisier, fraise sauvage, amélanchier, vigne des rivages, aralie à grappes |
-| ⚠️ Comestibles avec prudence | 3 — ail des bois (confusion scille penchée, espèce vulnérable), fougère-aigle (jeunes crosses bien cuites), sureau du Canada (fleurs et baies toujours cuites) |
-| ☣️ Toxiques | 3 — morelle noire, raisin d'Amérique (phytolacque), berce laineuse (sève phototoxique) |
-| ☠️ Mortelles | 3 — ciguë maculée, ciguë aquatique, datura stramoine |
+| ✅ Comestibles | 8 — ail des bois, amélanchier, thé des bois, petit thé, thé du Labrador, poivre des dunes, myrique baumier, comptonie voyageuse |
+| ⚠️ Avec prudence | 3 — ail des bois (espèce vulnérable, test de l'odeur d'ail), thé du Labrador (ledol — modération), poivre des dunes (modération, abortif traditionnel) |
 
-Total : **17 espèces**, 11 comestibles (dont 4 à prudence si l'on compte la fougère-aigle
-comme comestible conditionnelle), 3 toxiques, 3 mortelles.
+Total : **8 plantes et baies boréales, toutes comestibles (dont 3 à prudence)** — aucune
+espèce toxique ni mortelle au guide.
 
 ## Confusions à connaître au Québec
 
@@ -61,15 +59,16 @@ confusions de l'espèce concernée ; voici les plus coûteuses.
 
 | On cherche… | On risque de ramasser… | Ce qui tranche |
 |---|---|---|
-| Carotte sauvage | **Ciguë maculée**, mortelle | la ciguë a une **tige lisse à taches pourpres** et une **odeur de souris** ; la carotte sauvage a une **tige poilue** et une odeur de carotte. *La confusion qui tue.* |
-| Certaines ombellifères de berges | **Ciguë aquatique**, la plus mortelle d'Amérique du Nord | déterrer la racine : elle porte des **cloisons transversales** (chambres en nid d'abeille à la coupe). En cas de doute devant une ombellifère de milieu humide : on ne cueille pas. |
-| Angélique / carotte sauvage | **Berce laineuse** (toxique) | sève **phototoxique** : contact + soleil = brûlures graves. Grande ombellifère à tige couverte de poils laineux. |
-| Oignon sauvage | **Ail des bois vs scille penchée** | l'ail des bois **sent l'ail** au froissage de la feuille ; la scille penchée, toxique, n'a **aucune odeur d'ail**. Espèce vulnérable : récolte encadrée. |
-| Petites baies noires | **Morelle noire** (toxique) | baies noires en grappes **sans « couronne »** au sommet — contrairement au bleuet ou à la cerise de terre |
-| Baies rouges de bord de champ | **Raisin d'Amérique / phytolacque** (toxique) | grappes pendantes sur axe rouge pourpre ; **toute la plante est toxique, racine très toxique** |
+| Oignons sauvages | **Ail des bois vs muguet / scille penchée** | l'ail des bois **sent l'ail** au froissage ; le muguet (très toxique) et la scille penchée, **aucune odeur d'ail**. *Si ça ne sent pas l'ail, on ne mange pas.* |
+| Thé du Labrador | **Laurier des marais** (toxique) | dessous des feuilles **roux feutré** (vrai thé du Labrador) vs **vert** (laurier) ; fleurs **blanches** en ombelle vs **roses** en coupe |
+| Petit thé | **Baie blanche** (non comestible) | le petit thé est une **plante rampante** sur la mousse, avec **poils roux** sous les feuilles ; la baie blanche est une **plante dressée** des milieux secs |
+| Thé des bois | **Maïs de poule** (baie de prairie) | le thé des bois **sent la wintergreen** (pincette) au froissement ; le maïs de poule, aucune odeur |
+| Poivre des dunes | **Autres aulnes** (aulne rouge/incise) | feuilles **gaufrées crispées** du petit arbuste 1-3 m des milieux secs ; les feuilles d'aulne commun sont plus grandes et plus lisses |
+| Comptonie voyageuse / myrique baumier | **Myrique baumier / comptonie voyageuse** | feuilles **de fougère** (comptonie, sol sec sablonneux) vs **dentées** (myrique, milieu humide) — les deux restent comestibles |
 
-Règle générale : **toute ombellifère non identifiée avec certitude reste dans le bois.**
-Deux espèces mortelles sur trois du guide en sont.
+Règle générale : **toute plante non identifiée avec certitude reste dans le bois.** Les
+confusions les plus coûteuses touchent l'ail des bois et le thé du Labrador : vérifiez
+l'**odeur** et le **dessous des feuilles** avant de consommer.
 
 ## Lire les verdicts de la checklist
 
@@ -80,8 +79,9 @@ Deux espèces mortelles sur trois du guide en sont.
 | ✅ vert | tous les critères cochés **et** espèce comestible (ou à prudence) | récolte possible en respectant la prudence indiquée |
 | ☠️ rouge | espèce non comestible, peu importe le nombre de critères | ne pas consommer, jamais |
 
-Le verdict vert est **impossible** sur une espèce toxique ou mortelle : cocher les cinq
-critères d'une ciguë maculée donne un verdict rouge avec le numéro du centre antipoison.
+Le verdict vert est **impossible** sur une espèce toxique ou mortelle. Aucune des 8 espèces
+du guide n'est ni toxique ni mortelle : le verdict rouge sert aux espèces hors guide ou aux
+variétés perso déclarées dangereuses, et s'affiche alors avec le numéro du centre antipoison.
 
 ## Identification par photo (IA)
 
@@ -108,7 +108,7 @@ enregistrée dans les paramètres.
 
 - Le statut du guide **écrase** celui de l'IA quand le nom (ou un synonyme, une faute de
   frappe proche) correspond à une espèce documentée : le plus grave gagne. Une IA qui
-  répondrait « comestible, 95 % » sur une ciguë affiche quand même MORTEL.
+  répondrait « comestible, 95 % » sur une espèce dangereuse affiche quand même MORTEL.
 - Une espèce **absente du guide** ne reçoit jamais un badge vert seul : une alerte
   « Espèce absente du guide » rappelle que l'identification repose uniquement sur l'IA.
 - Les espèces masquées ou supprimées du guide conservent leur filet de sécurité (tombes).

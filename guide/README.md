@@ -11,7 +11,7 @@ Les 5 onglets en bas d'écran :
 | Onglet | À quoi ça sert |
 |---|---|
 | 📍 **Spots** | Enregistrez vos coins secrets (nom, position GPS, photo). |
-| 🌿 **Identifier** | Guide de **17 plantes et baies boréales du Québec** + checklist terrain + identification par photo (IA). |
+| 🌿 **Identifier** | Guide de **8 plantes et baies boréales du Québec** + checklist terrain + identification par photo (IA). |
 | 🧺 **Cueillettes** | Notez chaque récolte : date, espèce, poids, spot, météo. |
 | 📊 **Stats** | Total récolté, nombre de sorties, espèces, tops, barres mensuelles. |
 | ⚙️ **Paramètres** | Unités kg/lb, clé d'identification IA (Gemini ou OpenRouter), crédits photos, ce guide. |

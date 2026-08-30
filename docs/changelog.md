@@ -10,7 +10,7 @@ résume les grandes itérations ; `git log` reste la référence exacte.
 > Les entrées sous « Historique hérité » décrivent le projet d'origine (app champignons
 > cueillette-memphis, toujours en ligne séparément), conservées pour la trace. Cueillette
 > Boréale est un **fork** : les champignons en sont retirés et l'app est réorientée vers
-> 17 plantes et baies boréales.
+> 8 plantes et baies boréales.
 
 ## Sommaire
 
@@ -29,14 +29,14 @@ résume les grandes itérations ; `git log` reste la référence exacte.
 Cueillette Boréale est un fork séparé de l'app champignons « Cueillette Québec — édition
 Memphis » (`cueillette-memphis`), qui reste en ligne indépendamment. Changements du fork :
 
-- **Contenu** : le guide de 21 champignons est remplacé par **17 plantes et baies boréales
-  du Québec** — 11 comestibles (dont 4 à prudence), 3 toxiques, 3 mortelles. Aucune fiche
-  champignon ne subsiste dans le fork.
+- **Contenu** : le guide de 21 champignons est remplacé par **8 plantes et baies boréales
+  du Québec, toutes comestibles (dont 3 à prudence)**. Aucune fiche champignon ne subsiste
+  dans le fork.
 - **Checklist terrain** : les 5 critères sont adaptés aux plantes — **feuille, fruit, tige,
   odeur, habitat**.
-- **Sécurité alimentaire** : badges revus pour la flore boréale ; confusions mortelles
-  documentées (ciguë maculée vs carotte sauvage, ciguë aquatique à racine cloisonnée, berce
-  laineuse phototoxique, scille penchée vs ail des bois) ; la règle « plus grave gagne »
+- **Sécurité alimentaire** : badges revus pour la flore boréale ; confusions à connaître
+  documentées (ail des bois vs muguet/scille penchée, thé du Labrador vs laurier des marais,
+  petit thé vs baie blanche, thé des bois vs maïs de poule) ; la règle « plus grave gagne »
   et le filet IA sont conservés à l'identique.
 - **Identité visuelle** : palette **vert sapin** (ivoire `#EFF3EC`, primaire `#1E4D33`,
   mousse `#5E8C4A`, cuivre `#B5651D`, danger `#A32633`) remplaçant la palette
